@@ -1,6 +1,6 @@
 // Enables Tribune colors, but is required for everything.
 @import 'base-variables';
-// @import 'base-config'; // If you are using the off-platform blueprint, uncomment this.
+@import 'base-config'; // If you are using the off-platform blueprint, uncomment this.
 
 // ---- ADD MORE VARIABLES HERE ---------------------------------------------
 // ---- (If working off platform, you can overide variable values here) -----
@@ -29,19 +29,19 @@
 
 // ---- OFF-PLATFORM COMPONENT STYLES, UNCOMMENT THE ONES YOU WANT --------------------
 // ---- (You'll need most or all of them) ---------------------------------------------
-// @import 'base-scaffolding';
-// @import 'base-footer';
-// @import 'base-navbar';
-// @import 'base-social';
-// @import 'base-byline';
-// @import 'base-adverts';
-// @import 'base-comments';
-// @import 'base-call-to-action';
-// @import 'base-hamburger';
+@import 'base-scaffolding';
+@import 'base-footer';
+@import 'base-navbar';
+@import 'base-social';
+@import 'base-byline';
+@import 'base-adverts';
+@import 'base-comments';
+@import 'base-call-to-action';
+@import 'base-hamburger';
 
 
 // ---- IMPORT PROJECT STYLES FROM PARTIAL FILES HERE ---------------------------------------------
-
+@import 'header';
 
 
 // ---- WRITE MORE PROJECT STYLES HERE ---------------------------------------------
@@ -64,7 +64,7 @@
 	p{ @include agate(); }
 }
 
-/*
+
 // ##############################################
 // If you are using the off platform rig, then uncomment this code. otherwise you can delete it.
 // ##############################################
@@ -106,7 +106,7 @@ a{
 		}
 	}
 }
-*/
+
 @media all and (min-width: $phablet-min-width){
 	// By default, this is 450px+
 	p{

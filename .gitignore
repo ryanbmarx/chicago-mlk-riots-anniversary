@@ -1,3 +1,8 @@
 .DS_Store
 node_modules
 *.pyc
+css/
+js/app.min.js
+js/app.min.js.map
+js/vendor.min.js
+js/vendor.min.js.map
