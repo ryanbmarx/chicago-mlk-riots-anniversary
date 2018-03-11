@@ -1,0 +1,18 @@
+.header{}
+
+.panel{
+	height: 100vh; // 1vh == 1% viewport height
+	background: black url(http://fillmurray.com/2000/1000) center center no-repeat;
+	background-size: cover;
+	box-sizing:border-box;
+	padding: $grid-gap;
+	position:relative;
+
+	&__text{
+		max-width: 400px;
+		padding: $grid-gap;
+		position: absolute;
+		bottom:0;
+		right: 0;
+	}
+}

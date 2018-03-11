@@ -41,10 +41,14 @@
 
 
 // ---- IMPORT PROJECT STYLES FROM PARTIAL FILES HERE ---------------------------------------------
-@import 'header';
+@import 'riot-header';
 
 
 // ---- WRITE MORE PROJECT STYLES HERE ---------------------------------------------
+
+body{
+	margin: 0;
+}
 
 .sr-only{
 	// Use this to hide elements from everything except screen readers.
