@@ -39,6 +39,12 @@ S3_BUCKETS = {
 
 # Default template variables
 DEFAULT_CONTEXT = {
+   'OMNITURE': {   'domain': 'chicagotribune.com',
+                    'section': 'news',
+                    'sitename': 'Chicago Tribune',
+                    'subsection': 'local',
+                    'subsubsection': '',
+                    'type': 'dataproject'},
     'name': 'riots-chicago-1968-mlk',
     'title': '50th Anniversary of the Chicago MLK Riots'
 }
