@@ -14,8 +14,7 @@
     "type": "git",
     "url": ""
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Chicago Tribune News Applications",
   "license": "MIT",
   "devDependencies": {
@@ -39,5 +38,8 @@
     "> 1%",
     "last 2 versions",
     "ie >= 11"
-  ] 
+  ],
+  "dependencies": {
+    "in-view": "^0.6.1"
+  }
 }
