@@ -1,6 +1,6 @@
 <header class='header'>
 	{% for num in range(0,6) %}
-		<div class='panel panel--{{ num }}'>
+		<div class='panel panel--{{ num }}' style='background: black url(http://{{ ROOT_URL }}/img/top-{{ num }}.jpg) center center no-repeat;'>
 			<p class='panel__text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, ipsam, minima! Officiis enim quis quas illum dolores, optio id quasi, obcaecati aliquam, ea facere rerum quos, totam suscipit blanditiis vitae.</p>
 		</div>
 	{% endfor %}
