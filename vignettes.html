@@ -28,14 +28,12 @@
 				<h4>{{subject.first_name}} {{subject.last_name}}, {{subject.age}}</h4>
 			</div>
 			<div class='subject-photo'>
-				<img src='https://www.fillmurray.com/150/200'>
+				<img src='https://www.fillmurray.com/250/200'>
 			</div>
 			<div class='subject-info'>
-				<dl class='info-list'>
-					<dt>April 5, 1968:</dt><dd>{{subject.then}}</dd>
-					<dt>Now:</dt><dd>{{subject.now}}</dd>
-					<dt>Quote:</dt><dd class='quote'>{{subject.quote}}</dd>
-				</dl>
+				<p><span class='info-bold'>April 5, 1968:</span> {{subject.then}}</p>
+				<p><span class='info-bold'>Now:</span> {{subject.now}}</p>
+				<p><span class='info-bold'>Quote:</span> <span class='quote'>{{subject.quote}}</span></p>
 			</div>
 			<div class='subject-link'>
 				<a href='#'>Read {{subject.last_name}}'s story here</a>

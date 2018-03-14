@@ -1,0 +1,47 @@
+.capsules {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+}
+
+.subject-container {
+	max-width: 280px;
+	padding: 15px;
+	border: 2px solid $trib_red2;
+	margin: 20px;
+}
+
+.subject-hed {
+	h5 {
+		@include sans-serif-text(16px, 1.4em, bold);
+		color: $trib_red2;
+		margin: 0 0 5px 0;
+	}
+
+	h4 {
+		@include serif-text(25px, 1.3em, bold);
+		margin: 0 0 10px 0;
+	}
+}
+
+.subject-photo {
+	img {
+		border: 1px solid black;
+	}
+}
+
+.subject-link {
+	a {
+		color: $trib_red2;
+		font-style: italic;
+		font-weight: bold;
+	}
+}
+
+.quote {
+	font-style: italic;
+}
+
+.info-bold {
+	font-weight: bold;
+}
