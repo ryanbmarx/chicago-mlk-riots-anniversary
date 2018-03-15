@@ -22,7 +22,29 @@
 	</section>
 	<section id='capsules' class='capsules container'>
 		{% for subject in capsules %}
-		{% if subject.first_name_2 %}
+		{% if subject.name_2 %}
+		<div class='capsule'>
+			<div class='category'>
+				<h4>THE {{subject.category|upper}}</h4>
+			</div>
+			<div class='photo'>
+				<img src='https://www.fillmurray.com/200/125'>
+			</div>
+			<div class='blurb'>
+				<a href='#'><span class='bold-text'>{{subject.name}}, {{subject.age}}:</span> {{subject.text}}</a>
+			</div>
+			<div class='category'>
+				<h4> </h4>
+			</div>
+			<div class='photo'>
+				<img src='https://www.fillmurray.com/200/125'>
+			</div>
+			<div class='blurb'>
+				<a href='#'><span class='bold-text'>{{subject.name_2}}, {{subject.age_2}}:</span> {{subject.text_2}}</a>
+			</div>
+
+		</div>
+
 		{% else %}
 		<div class='capsule'>
 			<div class='category'>
