@@ -21,24 +21,21 @@
 		</div>
 	</section>
 	<section id='capsules' class='capsules container'>
-		{% for subject in vignettes %}
-		<div class='subject-container'>
-			<div class='subject-hed'>
-				<h5>The {{subject.category}}</h5>
-				<h4>{{subject.first_name}} {{subject.last_name}}, {{subject.age}}</h4>
+		{% for subject in capsules %}
+		{% if subject.first_name_2 %}
+		{% else %}
+		<div class='capsule'>
+			<div class='category'>
+				<h4>THE {{subject.category|upper}}</h4>
 			</div>
-			<div class='subject-photo'>
-				<img src='https://www.fillmurray.com/250/200'>
+			<div class='photo'>
+				<img src='https://www.fillmurray.com/200/125'>
 			</div>
-			<div class='subject-info'>
-				<p><span class='info-bold'>April 5, 1968:</span> {{subject.then}}</p>
-				<p><span class='info-bold'>Now:</span> {{subject.now}}</p>
-				<p><span class='info-bold'>Quote:</span> <span class='quote'>{{subject.quote}}</span></p>
-			</div>
-			<div class='subject-link'>
-				<a href='#'>Read {{subject.last_name}}'s story here</a>
+			<div class='blurb'>
+				<a href='#'><span class='bold-text'>{{subject.name}}, {{subject.age}}:</span> {{subject.text}}</a>
 			</div>
 		</div>
+		{% endif %}
 		{% endfor %}
 	</section>
 	{{ refer() }}
