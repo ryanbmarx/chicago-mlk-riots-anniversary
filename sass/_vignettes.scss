@@ -69,3 +69,31 @@
 		display: block;
 	}
 }
+
+.quote-container {
+	width: 420px;
+	height: 420px;
+	margin: 30px auto;
+	border-radius: 211px;
+	background-color: $trib_red2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 10px solid white;
+	box-shadow: 0 0 0 5px $trib_red2;
+}
+
+.quote {
+	width: 280px;
+	h4 {
+		@include serif-text(24px, 1.3em, bold);
+		text-align: center;
+		color: white;
+		margin: 0 0 5px 0;
+	}
+	p {
+		text-align: center;
+		color: white;
+		margin: 0;
+	}
+}

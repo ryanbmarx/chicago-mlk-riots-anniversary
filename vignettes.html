@@ -74,9 +74,13 @@
 					<p>Chicago Tribune</p>
 				</div>
 				{{vig.text|markdown}}
-				<h4 class='quote'>
-					{{vig.quote}}
-				</h4>
+				<div class='quote-container'>
+					<div class='quote'>
+						<h4>{{vig.quote}}</h4>
+						<p>-{{vig.first_name}} {{vig.last_name}}</p>
+					</div>
+				</div>
+				{{vig.text_2|markdown}}
 			</div>
 		</div>
 		{% endfor %}
