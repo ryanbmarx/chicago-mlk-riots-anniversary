@@ -1,3 +1,4 @@
+//Capsule styling for top of page
 .capsules {
 	max-width: 700px;
 	margin: auto;
@@ -8,10 +9,6 @@
 	margin-bottom: 20px;
 	padding: 10px;
 	background-color: $trib_gray4;
-
-	&:hover {
-		background-color: $trib_gray3;
-	}
 }
 
 .category {
@@ -33,6 +30,12 @@
 	}
 }
 
+.blurbs {
+	&--duo{
+		height: 125px;
+	}
+}
+
 .photo {
 	margin-right: 20px;
 	width: 200px;
@@ -40,4 +43,29 @@
 
 .bold-text {
 	font-weight: bold;
+}
+
+
+//styles for vignette text
+
+.vignette-container {
+	margin-bottom: 40px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid black;
+}
+.vignette-kicker {
+	@include sans-serif-text(21px, 1.3em, bold);
+	text-align: center;
+}
+
+.deck {
+	@include serif-text(35px, 1.3em);
+	text-align: center;
+}
+
+.vignette-header {
+	img {
+		margin: auto;
+		display: block;
+	}
 }
