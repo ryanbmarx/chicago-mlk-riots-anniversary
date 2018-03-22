@@ -1,100 +1,53 @@
-{% extends "_base.html" %}
+{% extends "subtemplates/_riots-base.html" %}
 
 {% block library_scripts %}
 	{# <script src="//{{ ROOT_URL }}/js/vendor.min.js" type="text/javascript"></script> #}
 {% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/vignettes.css">
 {% endblock stylesheets %}
 
 
 {% block content %}
-	{# YOUR STUFF GOES HERE #}
+	{# <div class="advert" data-ad-type="leaderboard"></div> #}
+	{% include 'subtemplates/vignettes/_header.html' %}
+	<div class='vignettes-container'>
+		<nav class='vignettes-nav'>
+			{% include 'subtemplates/_vignettes-nav.html' %}
+		</nav>
+		<div class='vignettes-column'>
+			<section id='intro' class='intro container'>
+				<div class='river'>
+					<div class="advert" data-ad-type="shrinky-cube"></div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores ipsum quo? Accusamus, excepturi impedit a magni exercitationem molestiae repellendus cumque, sed ullam ex dicta dolore minus esse fugit, et.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores ipsum quo? Accusamus, excepturi impedit a magni exercitationem molestiae repellendus cumque, sed ullam ex dicta dolore minus esse fugit, et.</p>
+				</div>
+				{{ refer() }}
+			</section>
+			
+			
+			<section id='content' class='content container'>
+				{% for vig in vignettes %}
+					{% set v = vig %}
+					{% include 'subtemplates/_vignette.html' %}
 
-	<div class="advert" data-ad-type="leaderboard"></div>
-	<section id='intro' class='intro container'>
-		<div class='river'>
-			<div class="advert" data-ad-type="shrinky-cube"></div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores ipsum quo? Accusamus, excepturi impedit a magni exercitationem molestiae repellendus cumque, sed ullam ex dicta dolore minus esse fugit, et.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores ipsum quo? Accusamus, excepturi impedit a magni exercitationem molestiae repellendus cumque, sed ullam ex dicta dolore minus esse fugit, et.</p>
+				{% endfor %}
+			</section>
+			<section id='credits' class='credits container'>
+				<div class='river'>
+					{% if note %}{{ note|markdown }}{% endif %}
+					{% if sources %}{{ sources|markdown }}{% endif %}
+					{% if credit %}{{ credit|markdown }}{% endif %}
+				</div>
+			</section>
 		</div>
-	</section>
-	<section id='capsules' class='capsules container'>
-		{% for subject in capsules %}
-		{% if subject.name_2 %}
-		<div class='capsule'>
-			<div class='category'>
-				<h4>THE {{subject.category|upper}}</h4>
-			</div>
-			<div class='photo--duo'>
-				<div class='photo'>
-					<img src='https://www.fillmurray.com/200/125'>
-				</div>
-				<div class='photo'>
-					<img src='https://www.fillmurray.com/200/125'>
-				</div>
-			</div>
-			<div class='blurbs'>
-				<div class='blurb blurbs--duo'>
-					<a href='#'><span class='bold-text'>{{subject.name}}, {{subject.age}}:</span> {{subject.text}}</a>
-				</div>
-				<div class='blurb blurbs--duo'>
-					<a href='#'><span class='bold-text'>{{subject.name_2}}, {{subject.age_2}}:</span> {{subject.text_2}}</a>
-				</div>
-			</div>
-		</div>
-		{% else %}
-		<div class='capsule'>
-			<div class='category'>
-				<h4>THE {{subject.category|upper}}</h4>
-			</div>
-			<div class='photo'>
-				<img src='https://www.fillmurray.com/200/125'>
-			</div>
-			<div class='blurb'>
-				<a href='#'><span class='bold-text'>{{subject.name}}, {{subject.age}}:</span> {{subject.text}}</a>
-			</div>
-		</div>
-		{% endif %}
-		{% endfor %}
-	</section>
-	{{ refer() }}
-	<section id='content' class='content container'>
-		{% for vig in vignettes %}
-		<div class='vignette-container'>
-			<div class='vignette-header'>
-				<h4 class='vignette-kicker'>THE {{vig.category|upper}}</h4>
-				<img src='https://www.fillmurray.com/1000/650'>
-				<h3 class='deck'>{{vig.deck}}</h3>
-			</div>
-			<div class='river'>
-				<div class='byline'>
-					<p>{{vig.byline}}</p>
-					<p>Chicago Tribune</p>
-				</div>
-				{{vig.text|markdown}}
-				<div class='quote-container'>
-					<div class='quote'>
-						<h4>{{vig.quote}}</h4>
-						<p>-{{vig.first_name}} {{vig.last_name}}</p>
-					</div>
-				</div>
-				{{vig.text_2|markdown}}
-			</div>
-		</div>
-		{% endfor %}
-	</section>
-	<section id='credits' class='credits container'>
-		<div class='river'>
-			{% if note %}{{ note|markdown }}{% endif %}
-			{% if sources %}{{ sources|markdown }}{% endif %}
-			{% if credit %}{{ credit|markdown }}{% endif %}
-		</div>
-	</section>
+	</div>
+
 {% endblock content %}
 
 
 {% block scripts %}
 	{# <script src="//{{ ROOT_URL }}/js/app.min.js" type="text/javascript"></script> #}
+	<script src="//players.brightcove.net/3690581440001/S1vBkbMfe_default/index.min.js"></script>
 {% endblock %}

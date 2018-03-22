@@ -1,20 +1,34 @@
+{% set total_panels = 4 %}
+
 <header class='header'>
-	<div class='small-title-card'>
-		<h5>1968 CHICAGO RIOTS</h5>
-	</div>
-	<div class='dateline-background'>
-		<div class='dateline-container'>
-			<div class='dateline'>
-				<h3>April 4, 1968</h3>
-				<h4>Martin Luther King Jr. has been assassinated.</h4>
+		{# <div class='dotted-line'></div> #}
+	{% for num in range(0,total_panels) %}
+		<div class='panel panel--{{ num }}' style='background: black url(http://{{ ROOT_URL }}/img/top-{{ num }}.jpg) center center no-repeat;'>
+
+	{# 		{% if loop.first%}
+				<div class='dateline-background'>
+					<div class='dateline-container'>
+						<div class='dateline'>
+							<h3>April 4, 1968</h3>
+							<h4>Martin Luther King Jr. has been assassinated.</h4>
+						</div>
+					</div>	
+				</div>
+			{% endif %} #}
+
+			<div class='panel__inner'>
+				<p class='panel__text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, ipsam, minima! Officiis enim quis quas illum dolores, optio id quasi, obcaecati aliquam, ea facere rerum quos, totam suscipit blanditiis vitae.</p>
 			</div>
 		</div>
-		<div class='dotted-line'>
+	{% endfor %}
+	<div class='panel panel--headline' style='background: black url(http://{{ ROOT_URL }}/img/top-{{ total_panels }}.jpg) center center no-repeat;'>
+		<div class='panel__inner'>
+			<h1 class='headline'>Rage, riots, ruin</h1>
+			<h2 class='subheadline'>50 years ago, Chicago’s West Side burned. Today, some neighborhoods still bear scars from that destruction</h2>
+			<div class='bylines'>
+				<p>Bylines here and here nad here and here</p>
+				<p>PUBLISHED: DATE</p>
+			</div>
 		</div>
 	</div>
-	{% for num in range(0,6) %}
-		<div class='panel panel--{{ num }}' style='background: black url(http://{{ ROOT_URL }}/img/top-{{ num }}.jpg) center center no-repeat;'>
-			<p class='panel__text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, ipsam, minima! Officiis enim quis quas illum dolores, optio id quasi, obcaecati aliquam, ea facere rerum quos, totam suscipit blanditiis vitae.</p>
-		</div>
-	{% endfor %}
 </header>

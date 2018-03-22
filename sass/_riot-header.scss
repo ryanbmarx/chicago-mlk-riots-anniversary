@@ -1,45 +1,45 @@
 .header{
 	background-color: black;
-	padding-top: 10px;
+	// padding-top: 10px;
 }
 
-.dotted-line {
-	width: 50%;
-	border-right: 5px dashed $trib_red2;
-	height: 100vh;
-}
+// .dotted-line {
+// 	width: 50%;
+// 	border-right: 5px dashed $trib_red2;
+// 	height: 100vh;
+// }
 
-.small-title-card {
-	background-color: $trib_gray1;
-	width: 280px;
-	padding: 5px;
-	margin: auto;
+// .small-title-card {
+// 	background-color: $trib_gray1;
+// 	width: 280px;
+// 	padding: 5px;
+// 	margin: auto;
 
-	h5{
-		margin: 0;
-		padding: 0;
-		text-align: center;
-		color: $trib_gray3;
-		@include sans-serif-text(14px, 1.4em, bold);
-	}
-}
+// 	h5{
+// 		margin: 0;
+// 		padding: 0;
+// 		text-align: center;
+// 		color: $trib_gray3;
+// 		@include sans-serif-text(14px, 1.4em, bold);
+// 	}
+// }
 
-.dateline-background {
-	height: 100vh;
-}
+// .dateline-background {
+// 	height: 100vh;
+// }
 
-.dateline-container {
-	margin: 300px auto 0 auto;
-	width: 400px;
-	height: 400px;
-	border-radius: 201px;
-	background-color: $trib_red2;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 10px solid black;
-	box-shadow: 0 0 0 5px $trib_red2;
-}
+// .dateline-container {
+// 	margin: 300px auto 0 auto;
+// 	width: 400px;
+// 	height: 400px;
+// 	border-radius: 201px;
+// 	background-color: $trib_red2;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	border: 10px solid black;
+// 	box-shadow: 0 0 0 5px $trib_red2;
+// }
 .dateline{
 	h3{
 		text-align: center;
@@ -59,21 +59,55 @@
 }
 
 .panel{
-	height: 100vh; // 1vh == 1% viewport height
+	height: calc(100vh - #{$navbar-overall-height}); // 1vh == 1% viewport height
 	background-size: cover;
 	box-sizing:border-box;
 	padding: $grid-gap;
 	position:relative;
+	border-bottom: 3px solid white;
 
-	&__text{
-		max-width: 400px;
+
+	&__inner{
+		max-width: 500px;
 		padding: $grid-gap;
 		position: absolute;
-		bottom:0;
-		right: 0;
-		background-color: black;
-		opacity: 0.7;
+		bottom:$grid-gap * 3;
+		right: 50%;
+		background-color: rgba(black, .7);
+		transform: translate(50%, 0)
+		// color: white;	
+	}
+
+	&__text{
+		font: 20px/1.5em "Open sans", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+		opacity: 0.85;
 		color: white;
 	}
 
+	&--header{
+		.panel__inner{
+
+		}
+	}
+}
+
+
+
+.headline{
+	@include serif-text(70px, 1.3em, normal);
+	color: white;
+	margin: 0 0 #{$grid-gap / 2} 0;
+}
+
+.subheadline{
+	font: 20px/1.5em "Open sans", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	color: white;
+	margin: 0 0 #{$grid-gap / 2} 0;
+}
+
+.bylines{
+	p{
+		font: 16px/1.5em "Open sans", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+		color: white;
+	}
 }
