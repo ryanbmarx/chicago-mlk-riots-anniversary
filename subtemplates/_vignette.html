@@ -1,0 +1,30 @@
+<div class='vignette'>
+	<h4 class='vignette__kicker'>THE {{vig.kicker|upper}}</h4>
+	<figure class='vignette__quote'>
+		<blockquote>{{vig.quote}}</blockquote>
+		<figcaption>
+			<p class='vignette__quote-name'>{{vig.first_name}} {{vig.last_name}}</p>
+			<p class='vignette__quote-description'>{{ vig.then }}</p>
+		</figcaption>
+	</figure>
+	<figure class='vignette__video'>
+{# 		<img src='https://www.fillmurray.com/1000/650'>
+		<figcaption>Photo credit here</figcaption>#}	
+		<div class="video-wrapper">
+			<video
+			data-account="3690581440001"
+			data-player="S1vBkbMfe"
+			data-embed="default"
+			data-video-id="ref:{{ vig.video_id }}"
+			class="video-js"
+			controls></video>
+		</div>
+	</figure>
+	<h2 class='deck'>{{vig.deck}}</h2>
+	
+	<div class='river'>
+		{{vig.text|markdown}}
+		{{vig.text_2|markdown}}
+		<p><em>— {{ vig.byline }}</em></p>
+	</div>
+</div>

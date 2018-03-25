@@ -1,0 +1,54 @@
+<ul class='capsules'>
+	{% for v in vignettes %}
+	{# Loop through the vigennettes and make our pills #}
+		<li class='capsule {% if loop.first %} capsule--active{% endif %}'>
+			<a class='capsule__link' href="#">
+				<img class='capsule__image' src='{{ v.image }}' alt="" />
+				<span class='capsule__text' >{{ v.kicker }}</span>
+			</a>
+		</li>
+	{% endfor %}
+</ul>
+
+
+{# 
+
+		<section id='capsules' class='capsules container'>
+		{% for subject in capsules %}
+		{% if subject.name_2 %}
+		<div class='capsule'>
+			<div class='category'>
+				<h4>THE {{subject.category|upper}}</h4>
+			</div>
+			<div class='photo--duo'>
+				<div class='photo'>
+					<img src='https://www.fillmurray.com/200/125'>
+				</div>
+				<div class='photo'>
+					<img src='https://www.fillmurray.com/200/125'>
+				</div>
+			</div>
+			<div class='blurbs'>
+				<div class='blurb blurbs--duo'>
+					<a href='#'><span class='bold-text'>{{subject.name}}, {{subject.age}}:</span> {{subject.text}}</a>
+				</div>
+				<div class='blurb blurbs--duo'>
+					<a href='#'><span class='bold-text'>{{subject.name_2}}, {{subject.age_2}}:</span> {{subject.text_2}}</a>
+				</div>
+			</div>
+		</div>
+		{% else %}
+		<div class='capsule'>
+			<div class='category'>
+				<h4>THE {{subject.category|upper}}</h4>
+			</div>
+			<div class='photo'>
+				<img src='https://www.fillmurray.com/200/125'>
+			</div>
+			<div class='blurb'>
+				<a href='#'><span class='bold-text'>{{subject.name}}, {{subject.age}}:</span> {{subject.text}}</a>
+			</div>
+		</div>
+		{% endif %}
+		{% endfor %}
+	</section> #}
