@@ -1,0 +1,81 @@
+.vignettes-header{
+	min-height: calc(100vh - #{$navbar-overall-height});
+	background: #aaa url(../img/top-0.jpg) center center no-repeat;
+	background-size:cover;
+	position: relative;
+	margin-bottom: $grid-gap;
+	display:flex;
+
+	
+		    &:before{
+	    	content:"";
+	    	display:block;
+	    	background: black;
+	    	opacity: .7;
+
+	    	position: absolute;
+	    	top: 0;
+	    	left: 0;
+	    	width: 100%;
+	    	height: 100%;
+	    }
+	// &__image{
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -50%);
+	// 	height: 100%;
+	// }
+
+	&__inner{
+		box-sizing: border-box;
+		background: rgba(black, .7);
+		padding: $grid-gap;
+		margin: auto;
+		max-width: 600px;
+		position: relative;
+
+		text-align:center;
+	}
+
+	&__headline{
+		@include label1();
+		color:white;
+		margin: 0;
+	}
+
+	&__dek{
+		color: white;
+		margin: 0;
+	}
+
+	&__mugs{
+		display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    align-items: stretch;
+
+	    list-style:none;
+	    margin: #{$grid-gap / 2} 0;
+	    padding: 0;
+	}
+}
+
+.header-mug{
+
+    flex-basis: 140px;
+    text-align: center;
+    margin-right: 15px;
+
+	&__image{
+	    border-radius: 50%;
+	    border: 7px solid #eee;
+	    width: 100%;
+	    box-sizing: border-box;
+    }
+
+    &__text{
+    	@include sans-serif-text(16px, 1.3em, normal);
+    	color:white;
+    }
+}

@@ -68,14 +68,19 @@
 
 
 	&__inner{
-		max-width: 500px;
 		padding: $grid-gap;
 		position: absolute;
 		bottom:$grid-gap * 3;
 		right: 50%;
 		background-color: rgba(black, .7);
-		transform: translate(50%, 0)
-		// color: white;	
+		transform: translate(50%, 0);
+		
+		// @supports not ((width:max-content) or (width:-moz-max-content) or (width:-webkit-max-content) or (width:-o-max-content) or (width:-ie-max-content)){
+			// In browsers that do not support `width:max-content`, this will use a 
+			// max-width on the container, but that might force the text to wrap.
+			max-width: 500px;
+		// }
+
 	}
 
 	&__text{
@@ -97,6 +102,15 @@
 	@include serif-text(70px, 1.3em, normal);
 	color: white;
 	margin: 0 0 #{$grid-gap / 2} 0;
+	
+	
+	// @supports(width:max-content) or (width:-moz-max-content) or (width:-webkit-max-content) or (width:-o-max-content) or (width:-ie-max-content){
+	// 	// In browsers that support it, this  will stretch the headline
+	// 	// to a reasonable width and stretch the container while we're 
+	// 	// at it. If the browser doesn't support this, then we'll use a 
+	// 	// max-width on the container, but that might force the text to wrap.
+	// 	width: max-content;
+	// }
 }
 
 .subheadline{

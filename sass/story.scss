@@ -1,0 +1,106 @@
+@import 'base-variables';
+@import 'base-config'; // If you are using the off-platform blueprint, uncomment this.
+@import 'riots-config'; 
+
+@import 'base-mixins';
+
+@import 'base-photos-and-arrangements';
+
+// theming
+
+p{
+	color: white;
+}
+
+
+body{
+	background: $color-background-main;
+}
+
+.container{
+	// background: lightgreen;
+	max-width: $container-max-width;
+	padding: $container_padding_h;
+	position: relative;
+}
+
+.story .river{
+	// We only want rivers inside our main story container to do this
+	max-width: $river-text-width;
+	margin: 0 auto;
+	position: static;
+}
+
+.graphic-fpo{
+	// width: 100%;
+	// background: #888;
+	margin: $grid-gap 0;
+	img {width: 100%;}
+	p{
+		@include sans-serif();
+		margin: auto;
+		color: #{set-text-color(darkblue, true)} !important;
+		
+	}
+}
+
+
+.map-wrapper{
+	margin: $grid-gap 0;
+	&--traveler{
+		display:none;
+	}
+}
+
+.map{
+	display:contents;
+
+	img{ width: 100%;}
+}
+
+
+
+@media all and (min-width: $tablet-landscape-min-width){
+
+	.story .river{
+		// width: $river-text-width;
+		margin: 0 ;
+		// background: yellow;
+		// position: static;
+
+	}
+
+	.graphic-fpo{
+		// For the side-saddle graphics
+		width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h * 2});
+		position: absolute;
+		left: $graphic-left-edge;
+		margin: 0;
+		// padding: 20px;
+		// box-sizing:border-box;
+	}
+
+	.map-wrapper{
+		display:none;
+		&--traveler{
+			display:block;
+			margin: 0;
+			width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h});
+			position: absolute;
+			left: $graphic-left-edge;
+			min-height: 600px;
+			height: 100%; // Since this is positioned absolutely, 100% height should stretch it to the full height of the container
+		}
+	}
+
+	.map{
+		position:sticky;
+		top: #{$grid-gap + $navbar-overall-height};
+		display:block;
+		// This max height makes sure it is vertically centered in shorter 
+		// viewports and not forced into a tall height on larger viewports
+		// = TOTAL HEIGHT - NAV WITH A GRID-GAP MARGIN ABOVE AND BELOW.
+		max-width: calc(100vh - #{($grid-gap * 2) + $navbar_overall_height});
+		overflow: hidden;
+	}
+}
