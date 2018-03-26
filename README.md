@@ -2,6 +2,13 @@
 
 A [Tarbell](http://tarbell.io) project.
 
+CHEAT SHEET
+-----------
+
+- To pull changes to blueprint, from project root, run `git submodule update --init --recursive`
+- To push changes to the project PLUS changes to blueprint, run `git push --recurse-submodules=on-demand`
+
+
 Assumptions
 -----------
 
