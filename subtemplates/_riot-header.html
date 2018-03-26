@@ -1,34 +1,52 @@
-{% set total_panels = 4 %}
-
 <header class='header'>
 		{# <div class='dotted-line'></div> #}
-	{% for num in range(0,total_panels) %}
-		<div class='panel panel--{{ num }}' style='background: black url(http://{{ ROOT_URL }}/img/top-{{ num }}.jpg) center center no-repeat;'>
-
-	{# 		{% if loop.first%}
-				<div class='dateline-background'>
-					<div class='dateline-container'>
-						<div class='dateline'>
-							<h3>April 4, 1968</h3>
-							<h4>Martin Luther King Jr. has been assassinated.</h4>
-						</div>
-					</div>	
-				</div>
-			{% endif %} #}
-
-			<div class='panel__inner'>
-				<p class='panel__text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, ipsam, minima! Officiis enim quis quas illum dolores, optio id quasi, obcaecati aliquam, ea facere rerum quos, totam suscipit blanditiis vitae.</p>
+	{% for panel in intro %}
+ 		{% if loop.first%}
+ 		<div class='panel'>
+			<div class='dateline-background'>
+				<p class='panel__text'>{{panel.type}}</p>
 			</div>
 		</div>
+		{% else %}
+		<div class='panel panel--{{ panel.num }}' style='background: black url(http://{{ ROOT_URL }}/img/top-photos/top-{{ panel.num }}.jpg) center center no-repeat;'>
+			<div class='panel__inner'>
+				<p class='panel__text'>{{panel.type}}</p>
+			</div>
+		{% endif %}
+		</div>
 	{% endfor %}
-	<div class='panel panel--headline' style='background: black url(http://{{ ROOT_URL }}/img/top-{{ total_panels }}.jpg) center center no-repeat;'>
+	<div class='headline-container' style='background: #222 center center no-repeat;'>
+		<h1 class='headline'>{{headline|upper}}</h1>
+		<h2 class='subheadline'>{{deck}}</h2>
+		<div class='bylines'>
+			<p>{{byline}}</p>
+			<p>PUBLISHED: DATE</p>
+		</div>
+	</div>	
+	{#
+	<div class='panel panel--headline' style='background: black center center no-repeat;'>
 		<div class='panel__inner'>
-			<h1 class='headline'>Rage, riots, ruin</h1>
-			<h2 class='subheadline'>50 years ago, Chicago’s West Side burned. Today, some neighborhoods still bear scars from that destruction</h2>
+			<h1 class='headline'>{{headline}}</h1>
+			<h2 class='subheadline'>{{deck}}</h2>
 			<div class='bylines'>
-				<p>Bylines here and here nad here and here</p>
+				<p>{{byline}}</p>
 				<p>PUBLISHED: DATE</p>
 			</div>
+		</div>
+	</div>
+	#}
+
+	<div class='now-photos--container'>
+		<div class='now-photos'>
+			<div class='now-photos--single'>
+				<img src='http://{{ ROOT_URL }}/img/riots-today/riots1.jpg'>
+			</div>
+			<div class='now-photos--single'>
+				<img src='http://{{ ROOT_URL }}/img/riots-today/riots3.jpg'>
+			</div>
+		</div>
+		<div class='now-photos--cap'>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		</div>
 	</div>
 </header>
