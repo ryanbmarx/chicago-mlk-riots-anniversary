@@ -4,13 +4,13 @@
  		{% if loop.first%}
  		<div class='panel'>
 			<div class='dateline-background'>
-				<p class='panel__text'>{{panel.type}}</p>
+				<p class='panel__text'>{{panel.text}}</p>
 			</div>
 		</div>
 		{% else %}
 		<div class='panel panel--{{ panel.num }}' style='background: black url(http://{{ ROOT_URL }}/img/top-photos/top-{{ panel.num }}.jpg) center center no-repeat;'>
 			<div class='panel__inner'>
-				<p class='panel__text'>{{panel.type}}</p>
+				<p class='panel__text'>{{panel.text}}</p>
 			</div>
 		{% endif %}
 		</div>
