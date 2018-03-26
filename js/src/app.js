@@ -2,7 +2,6 @@ import inView from 'in-view';
 
 function isMobile(){
     // returns false if the side-saddle arrangement is active; For now, we'll just make it true
-    return true;
     return window.innerWidth < 850 ? true : false;
 }
 
@@ -10,7 +9,7 @@ function isMobile(){
 
 window.addEventListener('DOMContentLoaded', function(e){
 	console.log('DOMContentLoaded');
-
+	console.log('We are on mobile?', isMobile());
 
 	// Only do this if we are desktop+
 	if (!isMobile()){
