@@ -48,6 +48,7 @@ body{
 .map-wrapper{
 	margin: $grid-gap 0;
 	&--traveler{
+		// This is the side-saddle map
 		display:none;
 	}
 }
@@ -58,7 +59,26 @@ body{
 	img{ width: 100%;}
 }
 
+// <span id='betty-home' class='map-waypoint'>
 
+.map-waypoint--visible{
+	background: $trib-gray4;
+	color: #{set-text-color($trib-gray4, true)};
+}
+
+.map-layer{
+	position:absolute;
+	top:0;
+	left: 0;
+	opacity:0;
+	transition: opacity 150ms ease;
+
+	&--visible{
+		opacity:1;
+		transition: opacity 150ms ease;
+	}
+
+}
 
 @media all and (min-width: $tablet-landscape-min-width){
 
