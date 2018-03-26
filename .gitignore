@@ -6,3 +6,7 @@ js/app.min.js
 js/app.min.js.map
 js/vendor.min.js
 js/vendor.min.js.map
+
+#ArchieML stuff
+out_drive.html
+out_parsed.txt
