@@ -8,6 +8,7 @@
 // function, which is not imported until after the variables
 $base-text-color: #{set-text-color($color-background-main, true)};
 
+@import 'base-pullquote'; // If you want to start over with the pullquote design, remove this import
 @import 'base-photos-and-arrangements';
 
 // theming
@@ -15,7 +16,6 @@ $base-text-color: #{set-text-color($color-background-main, true)};
 p{
 	color: $base-text-color;
 }
-
 
 body{
 	background: $color-background-main;
@@ -31,6 +31,10 @@ h3{
     padding-left: .5em;
 }
 
+.trib-pullquote {
+	blockquote, figcaption{ color: $base-text-color; }
+}
+
 .container{
 	// background: lightgreen;
 	max-width: $container-max-width;
@@ -43,6 +47,12 @@ h3{
 	max-width: $river-text-width;
 	margin: 0 auto;
 	position: static;
+}
+
+.side{
+	// this class will bump it's element into the media column on desktop
+	margin: $grid-gap 0;
+
 }
 
 .graphic-fpo{
@@ -74,8 +84,6 @@ h3{
 	img{ width: 100%;}
 }
 
-// <span id='betty-home' class='map-waypoint'>
-
 .map-waypoint--visible{
 	background: $trib-gray4;
 	color: #{set-text-color($trib-gray4, true)};
@@ -103,6 +111,14 @@ h3{
 		// background: yellow;
 		// position: static;
 
+	}
+
+
+	.side{
+		width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h * 2});
+		position: absolute;
+		left: $graphic-left-edge;
+		margin: 0;
 	}
 
 	.graphic-fpo{
