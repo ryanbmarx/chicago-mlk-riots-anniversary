@@ -3,11 +3,6 @@
 // $tablet-min-width:650px !default;
 // $desktop-min-width:850px !default;
 
-// // TYPOGRAPHY
-// $sans-serif-fonts: "Arial", "Helvetica", sans-serif !default;
-// $serif-fonts: "Georgia", serif !default;
-// $color-links: $trib-blue4 !default;
-
 // // SCAFFOLDING
 // $grid-gap: 30px !default;
 $container-max-width: 1200px;
@@ -62,4 +57,11 @@ $river-text-width: 500px;
 // RIOTS BREAKPOINTS
 $tablet-landscape-min-width: $river-text-width * 2; // TODO: be smarter about this calculation
 
-$graphic-left-edge: $river-text-width + $grid-gap + $container_padding_h // This does the math to figure out the `left` attribute when accounting for edges, padding, etc.
+$graphic-left-edge: $river-text-width + $grid-gap + $container_padding_h; // This does the math to figure out the `left` attribute when accounting for edges, padding, etc.
+
+
+// // TYPOGRAPHY
+$sans-serif-fonts: "Open Sans", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+// $serif-fonts: "Georgia", serif !default;
+// $color-links: $trib-blue4 !default;
+

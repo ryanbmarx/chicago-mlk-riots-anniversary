@@ -84,7 +84,7 @@
 	}
 
 	&__text{
-		font: 20px/1.5em "Open sans", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+		font: 20px/1.5em #{$sans-serif-fonts};
 		opacity: 0.85;
 		color: white;
 	}
@@ -117,7 +117,7 @@
 }
 
 .subheadline{
-	font: 20px/1.5em "Open sans", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font: 20px/1.5em #{$sans-serif-fonts};
 	color: white;
 	margin: 0 0 #{$grid-gap / 2} 0;
 	text-align: center;
@@ -125,7 +125,7 @@
 
 .bylines{
 	p{
-		font: 16px/1.5em "Open sans", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+		font: 16px/1.5em #{$sans-serif-fonts};
 		color: white;
 		text-align: center;
 	}

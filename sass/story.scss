@@ -4,17 +4,31 @@
 
 @import 'base-mixins';
 
+// This is here and not in the riots config because it uses the set-text-color 
+// function, which is not imported until after the variables
+$base-text-color: #{set-text-color($color-background-main, true)};
+
 @import 'base-photos-and-arrangements';
 
 // theming
 
 p{
-	color: white;
+	color: $base-text-color;
 }
 
 
 body{
 	background: $color-background-main;
+}
+
+
+h3{
+	// These are story breakers and should remain the top-level header inside a story.
+	@include sans-serif-text(28px, 1.2em, 700);
+	color: $base-text-color;
+	margin: #{$grid-gap} 0 #{$grid-gap / 2} 0;
+    border-left: 1em solid $trib-red2;
+    padding-left: .5em;
 }
 
 .container{
@@ -44,6 +58,7 @@ body{
 	}
 }
 
+// The map graphic elements here
 
 .map-wrapper{
 	margin: $grid-gap 0;
