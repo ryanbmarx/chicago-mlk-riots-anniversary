@@ -151,7 +151,7 @@
   
   {% set tweet = quote_text + ' #WaterDrain via @chicagotribune' %}
     <figure class="trib-pullquote">
-        <ul class="social-menu">
+{#         <ul class="social-menu">
             <li>
                 <a target="_blank" href="https://twitter.com/share?url={{ page_url }}&text={{ tweet|urlencode }}">
                     <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
@@ -165,7 +165,7 @@
                 </a>
             </li>
         </ul>
-{#         <p>{{ quote_text|length }} CHARS QUOTE</p>
+ #}{#         <p>{{ quote_text|length }} CHARS QUOTE</p>
         <p>{{ tweet|length }} CHARS TOTAL</p> #}
         <blockquote>{{ quote_text|dumb_to_smart_quotes|process_text2(False) }}</blockquote>
         {% if quote_attribution %}
