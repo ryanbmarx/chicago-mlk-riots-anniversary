@@ -55,18 +55,44 @@ h3{
 
 }
 
-.graphic-fpo{
-	// width: 100%;
-	// background: #888;
+.graphic-wrapper{
+	padding: 20px;
+	box-sizing:border-box;
+	background:white;
 	margin: $grid-gap 0;
 	img {width: 100%;}
 	p{
 		@include sans-serif();
 		margin: auto;
-		color: #{set-text-color(darkblue, true)} !important;
+		color: #{set-text-color(darkblue, true)};
 		
 	}
+
+	.chart-headline{
+		@include label7();
+		color:black;
+	}
+
+	.chart-describer{
+		@include sans-serif();
+		color:black;
+	}
+
+	.chart-subheadline{
+		font-weight:bold;
+		color:black;
+		margin-top: $grid-gap / 2;
+	}
 }
+
+.chart{
+	height: 200px;
+	& + .chart {
+		margin-top: $grid-gap / 2;
+	}
+}
+
+
 
 // The map graphic elements here
 
@@ -121,14 +147,15 @@ h3{
 		margin: 0;
 	}
 
-	.graphic-fpo{
+	.graphic-wrapper{
 		// For the side-saddle graphics
 		width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h * 2});
 		position: absolute;
 		left: $graphic-left-edge;
 		margin: 0;
-		// padding: 20px;
-		// box-sizing:border-box;
+		padding: 20px;
+		box-sizing:border-box;
+		background:white;
 	}
 
 	.map-wrapper{
