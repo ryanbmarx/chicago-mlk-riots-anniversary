@@ -1,1 +1,22 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 876 894"><title>betty-home</title><rect x="595.98" y="65.65" width="222.75" height="222.75" rx="57.15" ry="57.15" transform="translate(881.37 -531.08) rotate(89.76)" fill="#e92139" stroke="#fff" stroke-miterlimit="10" stroke-width="6"/><rect x="417.97" y="245.18" width="222.75" height="222.75" rx="57.15" ry="57.15" transform="translate(883.65 -174.3) rotate(89.76)" fill="#e92139" stroke="#fff" stroke-miterlimit="10" stroke-width="6"/><rect x="239.96" y="424.72" width="222.75" height="222.75" rx="57.15" ry="57.15" transform="translate(885.93 182.49) rotate(89.76)" fill="#e92139" stroke="#fff" stroke-miterlimit="10" stroke-width="6"/><rect x="61.94" y="604.25" width="222.75" height="222.75" rx="57.15" ry="57.15" transform="translate(888.2 539.27) rotate(89.76)" fill="#e92139" stroke="#fff" stroke-miterlimit="10" stroke-width="6"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 610 622" style="enable-background:new 0 0 610 622;" xml:space="preserve">
+<g id="jonhnson_house">
+	<ellipse style="fill:#D7153A;stroke:#FFFFFF;stroke-width:1.5;" cx="213.733" cy="155.396" rx="6.696" ry="6.492"/>
+	<g>
+		<polygon points="220.221,262.277 97.481,262.277 97.481,218.611 169.835,218.611 214.843,154.896 180.262,218.611 
+			220.221,218.611 		"/>
+		<rect x="104.956" y="226.671" style="fill:none;" width="109.387" height="29.796"/>
+		<text transform="matrix(1 0 0 1 104.956 236.6947)" style="fill:#FFFFFF; font-family:'Arial-BoldMT'; font-size:14px;">Betty Johnson’s</text>
+		<text transform="matrix(1 0 0 1 104.956 252.5207)" style="fill:#FFFFFF; font-family:'Arial-BoldMT'; font-size:14px;">home</text>
+	</g>
+	<g>
+		<polygon style="fill:#FFFFFF;stroke:#231F20;" points="248.148,74.063 368.293,74.063 368.293,117.73 281.914,117.73 
+			258.987,137.826 271.487,117.73 248.148,117.73 		"/>
+		<rect x="255.623" y="81.838" style="fill:none;" width="107.864" height="29.796"/>
+		<text transform="matrix(1 0 0 1 255.6227 91.8623)" style="font-family:'Arial-BoldMT'; font-size:14px;">Heavy looting </text>
+		<text transform="matrix(1 0 0 1 255.6227 107.6883)" style="font-family:'Arial-BoldMT'; font-size:14px;">and rioting area</text>
+	</g>
+</g>
+</svg>

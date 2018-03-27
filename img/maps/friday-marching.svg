@@ -1,1 +1,19 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 876 894"><title>friday-marching</title><rect x="626.59" y="365.14" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(1523.85 261.45) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/><rect x="442.3" y="365.14" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(1209.24 391.77) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/><rect x="258" y="365.14" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(894.63 522.08) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/><rect x="73.71" y="365.14" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(580.02 652.4) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/><rect x="626.59" y="565.9" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(1665.81 604.17) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/><rect x="442.3" y="565.9" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(1351.2 734.49) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/><rect x="258" y="565.9" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(1036.59 864.81) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/><rect x="73.71" y="565.9" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(721.98 995.12) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/><rect x="626.59" y="113.65" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(1346.02 -167.87) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/><rect x="442.3" y="113.65" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(1031.41 -37.55) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/><rect x="258" y="113.65" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(716.8 92.76) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/><rect x="73.71" y="113.65" width="162.37" height="162.37" rx="57.15" ry="57.15" transform="translate(402.19 223.08) rotate(135)" fill="#433c98" stroke="#fff" stroke-miterlimit="10"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 610 622" style="enable-background:new 0 0 610 622;" xml:space="preserve">
+<g id="march_to_civic_center">
+	<rect x="405.987" y="125.826" style="fill:#D7153A;stroke:#FFFFFF;stroke-width:1.5;" width="7" height="7"/>
+	<g>
+		<polygon points="290.491,208.77 194.29,208.77 194.29,165.332 194.29,157.832 194.29,148.95 251.158,148.95 261.158,148.95 
+			290.491,148.95 290.491,159.556 409.487,129.326 290.491,169.295 		"/>
+		<rect x="201.266" y="157.011" style="fill:none;" width="84.392" height="45.488"/>
+		<text transform="matrix(1 0 0 1 201.2655 167.0343)" style="fill:#FFFFFF; font-family:'Arial-BoldMT'; font-size:14px;">Civic Center </text>
+		<text transform="matrix(1 0 0 1 201.2655 182.8603)" style="fill:#FFFFFF; font-family:'Arial-BoldMT'; font-size:14px;">now Daley </text>
+		<text transform="matrix(1 0 0 1 201.2655 198.6853)" style="fill:#FFFFFF; font-family:'Arial-BoldMT'; font-size:14px;">center</text>
+	</g>
+	<g>
+		<text transform="matrix(0.0086 0.9999 -1 0.0086 421.4873 93.13)" style="font-family:'Arial-BoldMT'; font-size:14.0005px;">STATE</text>
+	</g>
+</g>
+</svg>
