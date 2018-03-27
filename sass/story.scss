@@ -83,6 +83,11 @@ h3{
 		color:black;
 		margin-top: $grid-gap / 2;
 	}
+
+	.chart-label{
+		@include sans-serif-text(14px, 1em, 400);
+
+	}
 }
 
 .chart{

@@ -11,15 +11,17 @@ function isMobile(){
 
 
 window.addEventListener('load', function(e){
+
 	// -------------------------
 	// Load the cumulative chart
 	// -------------------------
 
 	console.log("window is loaded");
-	const 	innerMargins = { top:10,right:10,bottom:30,left:40 },
+	const 	innerMargins = { top:15, right:15 ,bottom:30, left:40 },
 			lineWeight = 6,
 			lineColors = ['#aaa', 'black'],
 			curve = false;
+
 	const populationChart27 = new MultilineChart({
 	    container: document.querySelector("#east-garfield-park-27"),
 	    dataset: populationData, // Will be charted AS IS. All transforms, etc., should be done by now.

@@ -153,9 +153,38 @@ class MultilineChart{
 				.attr('stroke-width', lineWeight)
 				.attr('fill', 'transparent')
 				.attr('stroke-linecap', 'round');
+			
 			if (app.options.highlightLastPoint[idx]){
 				// If a final-point highlight is requested, then add a circle and label
-				
+			
+
+				function getHighlightLabel(y){
+					if (y.toUpperCase().indexOf('BLACK') > -1 ) return "Black"
+					return "White"
+				}
+
+				const 	lastYValue = data[data.length - 1][y],
+						lastXValue = data[data.length - 1][x],
+						highlightCircleRadius = 8;
+
+				chartInner.append("circle")
+					.attr('r', highlightCircleRadius)
+					.attr('cx', xScale(lastXValue))
+					.attr('cy', yScale(lastYValue))
+					.style('stroke', 'black')
+					.style('stroke-width', 2)
+					.style('fill', 'transparent');
+
+
+				chartInner.append("text")
+					.classed('chart-label', true)
+					.text(`${getHighlightLabel(y)}: ${app.options.yAxis.axisFormatter(lastYValue)}`)
+					.attr('x', xScale(lastXValue))
+					.attr('y', yScale(lastYValue))
+					.attr('text-anchor', 'end')
+					.attr('dy', '-1.2em')
+					.attr('transform', `translate(${highlightCircleRadius},0)`)
+					.style('font-weight', 'bold')
 			}
 
 		});			
