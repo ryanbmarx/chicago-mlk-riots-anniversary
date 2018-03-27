@@ -3,6 +3,9 @@
 {% block library_scripts %}
 	{{ super() }}
 	<script src="//{{ ROOT_URL }}/js/vendor.min.js" type="text/javascript"></script>
+	<script>
+		const populationData = {{ data_population|tojson }};
+	</script>
 {% endblock %}
 
 {% block stylesheets %}
