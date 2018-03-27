@@ -21,6 +21,7 @@ body{
 	background: $color-background-main;
 }
 
+.cta__button { color: black }
 
 h3{
 	// These are story breakers and should remain the top-level header inside a story.
@@ -38,7 +39,7 @@ h3{
 .container{
 	// background: lightgreen;
 	max-width: $container-max-width;
-	padding: $container_padding_h;
+	padding: 0 $container_padding_h;
 	position: relative;
 }
 
@@ -146,7 +147,7 @@ h3{
 
 
 	.side{
-		width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h * 2});
+		width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h});
 		position: absolute;
 		left: $graphic-left-edge;
 		margin: 0;
