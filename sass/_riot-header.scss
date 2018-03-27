@@ -40,6 +40,23 @@
 // 	border: 10px solid black;
 // 	box-shadow: 0 0 0 5px $trib_red2;
 // }
+
+.first-slide-background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.first-slide {
+	width: 500px;
+	&--photo {
+		width: 100%;
+		border: 1px solid white;
+		margin: auto;
+	}
+}
+
+
 .dateline{
 	h3{
 		text-align: center;

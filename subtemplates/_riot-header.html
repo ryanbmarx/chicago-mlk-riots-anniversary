@@ -3,8 +3,11 @@
 	{% for panel in intro %}
  		{% if loop.first%}
  		<div class='panel'>
-			<div class='dateline-background'>
-				<p class='panel__text'>{{panel.text}}</p>
+			<div class='first-slide-background'>
+				<div class='first-slide'>
+					<img class='first-slide--photo' src='http://{{ ROOT_URL }}/img/mlk.jpg'>
+					<p class='panel__text'>{{panel.text}}</p>
+				</div>
 			</div>
 		</div>
 		{% else %}
