@@ -204,13 +204,14 @@ window.addEventListener('DOMContentLoaded', function(e){
 	}
 
 	    // Also, let's lazyload the images
-	    inView('.image--lazy img')
-	        .on('enter', el => {
-	        	const 	imageContainerWidth = el.parentNode.offsetWidth,
-	        			src = el.dataset.fullResSrc.replace('/650', `/${Math.floor(imageContainerWidth)}`);
-	            console.log('adding', src);
-	            el.setAttribute('src', src);
-	        });
+	 //    const lazyLoad = inView('.image--lazy img');
+		// lazyLoad.offset(-500);
+	 //    lazyLoad.on('enter', el => {
+	 //        	const 	imageContainerWidth = el.parentNode.offsetWidth,
+	 //        			src = el.dataset.fullResSrc.replace('/650', `/${Math.floor(imageContainerWidth)}`);
+	 //            console.log('adding', src);
+	 //            el.setAttribute('src', src);
+	 //        });
 
 	if (document.getElementById('comments-button')){
 		// If there is a comments button, then init comments on click. Otherwise, skip it. the sidebars 
