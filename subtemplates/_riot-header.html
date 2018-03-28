@@ -1,3 +1,5 @@
+{% from './subtemplates/_macros.html' import photo_arr as photo_arr  with context%}
+
 <header class='header'>
 		{# <div class='dotted-line'></div> #}
 	{% for panel in intro %}
@@ -26,30 +28,5 @@
 			<p>PUBLISHED: DATE</p>
 		</div>
 	</div>	
-	{#
-	<div class='panel panel--headline' style='background: black center center no-repeat;'>
-		<div class='panel__inner'>
-			<h1 class='headline'>{{headline}}</h1>
-			<h2 class='subheadline'>{{deck}}</h2>
-			<div class='bylines'>
-				<p>{{byline}}</p>
-				<p>PUBLISHED: DATE</p>
-			</div>
-		</div>
-	</div>
-	#}
-
-	<div class='now-photos--container'>
-		<div class='now-photos'>
-			<div class='now-photos--single'>
-				<img src='http://{{ ROOT_URL }}/img/vacant-lots/riots1.jpg'>
-			</div>
-			<div class='now-photos--single'>
-				<img src='http://{{ ROOT_URL }}/img/vacant-lots/riots3.jpg'>
-			</div>
-		</div>
-		<div class='now-photos--cap'>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		</div>
-	</div>
+	{# {{ photo_arr("2", "ct-riots-mlk-vacant-lots-topper-20180327", 800, False, True, "", topper_vacant_lot_caption) }} #}
 </header>
