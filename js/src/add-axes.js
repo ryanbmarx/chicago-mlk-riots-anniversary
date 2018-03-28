@@ -1,4 +1,4 @@
-import * as d3 from 'd3-select';
+import * as d3 from 'd3';
 
 module.exports = function addAxes(app, svg, yScale, xScale){
 	if (app.options.yAxis.showAxis){
@@ -13,16 +13,16 @@ module.exports = function addAxes(app, svg, yScale, xScale){
 
 	   svg.append('g')
 			.attr("class", "y axis")
-			.attr(`transform`,`translate(${margin.left},${margin.top})`)
+			.attr(`transform`,`translate(${app.options.innerMargins.left},${app.options.innerMargins.top})`)
 			.call(yAxis);
         
 		// Maybe we don't want all those lines on the axis
-        if (app.options.yAxis.removeAxisDomain) d3.select('.y.axis').selectAll('.domain').remove();
+        if (app.options.yAxis.removeAxisDomain) app.container.select('.y.axis').selectAll('.domain').remove();
 
         // Maybe we don't want all those lines on the axis
         if (app.options.yAxis.removeAxisTicks){
-        	d3.select('.y.axis').selectAll('.tick line').remove();
-        	d3.select('.y.axis').selectAll('.tick text').attr('dx', '.7em');
+        	app.container.select('.y.axis').selectAll('.tick line').remove();
+        	app.container.select('.y.axis').selectAll('.tick text').attr('dx', '.7em');
         }
 
 	}
@@ -33,7 +33,7 @@ module.exports = function addAxes(app, svg, yScale, xScale){
 		// Define the x axis 
 		const xAxis = d3.axisBottom(xScale);
 
-		// ... add a tick formatter if a format fucntion is supplied in the options.
+		// ... add a tick formatter if a format function is supplied in the options.
 		if (app.options.xAxis.axisFormatter) xAxis.tickFormat(app.options.xAxis.axisFormatter);
 
 		// If the user has defined the desired # ticks ...
@@ -42,16 +42,16 @@ module.exports = function addAxes(app, svg, yScale, xScale){
 		// Now, append the axis elements to the SVG
 	   svg.append('g')
 			.attr("class", "x axis")
-			.attr(`transform`,`translate(${ margin.left },${ margin.top + innerHeight })`)
+			.attr(`transform`,`translate(${ app.options.innerMargins.left },${ app.options.innerMargins.top + app.innerHeight })`)
 			.call(xAxis);
 
 		// Maybe we don't want all those lines on the axis
-        if (app.options.xAxis.removeAxisDomain) d3.select('.x.axis').selectAll('.domain').remove();
+        if (app.options.xAxis.removeAxisDomain) app.container.select('.x.axis').selectAll('.domain').remove();
         
 		// Maybe we don't want all those lines on the axis
         if (app.options.xAxis.removeAxisTicks){
-        	d3.select('.x.axis').selectAll('.tick line').remove();
-        	d3.select('.x.axis').selectAll('.tick text').attr('dy', '.3em');
+        	app.container.select('.x.axis').selectAll('.tick line').remove();
+        	app.container.select('.x.axis').selectAll('.tick text').attr('dy', '.3em');
         }
 
 	}

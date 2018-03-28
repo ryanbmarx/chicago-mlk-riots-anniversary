@@ -1,4 +1,4 @@
-import * as d3 from 'd3-select';
+import * as d3 from 'd3';
 
 module.exports = function addMeta(app, svg){
 
