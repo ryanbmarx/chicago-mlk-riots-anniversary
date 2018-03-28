@@ -448,7 +448,6 @@
 	</g>
 </g>
 <g id="windows_broken_x2F_fire">
-	<rect x="409.37" y="129.079" style="fill:#D72132;stroke:#000000;stroke-width:1.5;" width="10.233" height="6.16"/>
 	<g>
 		<polygon points="585.054,202.277 468.981,202.277 468.981,188.826 414.487,134.326 468.981,181.326 468.981,154.611 
 			585.054,154.611 		"/>
@@ -778,6 +777,7 @@
 				l-2.728,0.024l0.048,5.599l-1.688,0.014L421.801,129.66z"/>
 		</g>
 	</g>
-	<rect x="284.552" y="131.319" style="fill:#D72132;stroke:#000000;stroke-width:1.5;" width="9.935" height="12.007"/>
+	<rect x="284.552" y="133.319" style="fill:#D72132;stroke:#000000;stroke-width:1.5;" width="9.935" height="10.007"/>
+	<rect x="409.519" y="126.989" style="fill:#D72132;stroke:#000000;stroke-width:1.5;" width="9.935" height="10.007"/>
 </g>
 </svg>
