@@ -117,7 +117,10 @@ a{
 // Changes to comments to match the theme
 
 #comments-button{ color: white; }
-#comments .trb_cm_so[data-role="cm_container"] { background: white; }
+#comments .trb_cm_so[data-role="cm_container"] { 
+	background: white; 
+	padding-top: $grid-gap / 2;
+}
 
 @media all and (min-width: $phablet-min-width){
 	// By default, this is 450px+
