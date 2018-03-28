@@ -124,7 +124,7 @@ h3{
 }
 
 .map-waypoint--visible{
-	background: $trib-gray4;
+	background: lighten(yellow, 25%);
 	color: #{set-text-color($trib-gray4, true)};
 }
 
