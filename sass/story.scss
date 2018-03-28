@@ -62,27 +62,24 @@ h3{
 	background:white;
 	margin: $grid-gap 0;
 	img {width: 100%;}
-	p{
-		@include sans-serif();
-		margin: auto;
-		color: #{set-text-color(darkblue, true)};
-		
-	}
 
 	.chart-headline{
 		@include label7();
 		color:black;
+		margin: 0;
 	}
 
 	.chart-describer{
 		@include sans-serif();
 		color:black;
+		margin: 0;
 	}
 
 	.chart-subheadline{
+		@include sans-serif();
 		font-weight:bold;
 		color:black;
-		margin-top: $grid-gap / 2;
+		margin: #{$grid-gap / 2} 0 0 0;
 	}
 
 	.chart-label{
@@ -98,6 +95,17 @@ h3{
 	}
 }
 
+#population{
+	display:flex;
+	flex-wrap:wrap;
+
+	figcaption{ width: 100%; }
+	.chart{height: 150px;}
+	.graphic-wrapper__column{
+	    flex: 1 1 200px;
+	}
+
+}
 
 
 // The map graphic elements here
@@ -155,10 +163,10 @@ h3{
 
 	.graphic-wrapper{
 		// For the side-saddle graphics
-		width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h * 2});
-		position: absolute;
-		left: $graphic-left-edge;
-		margin: 0;
+		// width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h});
+		// position: absolute;
+		// left: $graphic-left-edge;
+		// margin: 0;
 		padding: 20px;
 		box-sizing:border-box;
 		background:white;
