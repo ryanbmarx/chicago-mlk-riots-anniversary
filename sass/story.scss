@@ -111,6 +111,7 @@ h3{
 
 .map-wrapper{
 	margin: $grid-gap 0;
+	position:relative;
 	&--traveler{
 		// This is the side-saddle map
 		display:none;
@@ -119,7 +120,6 @@ h3{
 
 .map{
 	display:contents;
-
 	img{ width: 100%;}
 }
 
@@ -132,14 +132,7 @@ h3{
 	position:absolute;
 	top:0;
 	left: 0;
-	opacity:0;
-	transition: opacity 150ms ease;
-
-	&--visible{
-		opacity:1;
-		transition: opacity 150ms ease;
-	}
-
+	// opacity:1;
 }
 
 @media all and (min-width: $tablet-landscape-min-width){
@@ -183,7 +176,14 @@ h3{
 			height: 100%; // Since this is positioned absolutely, 100% height should stretch it to the full height of the container
 		}
 	}
-
+	.map-layer{
+		opacity:0;
+		transition: opacity 150ms ease;
+		&--visible{
+			opacity:1;
+			transition: opacity 150ms ease;
+		}
+	}
 	.map{
 		position:sticky;
 		top: #{$grid-gap + $navbar-overall-height};
