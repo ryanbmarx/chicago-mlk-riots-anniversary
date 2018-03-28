@@ -40,8 +40,6 @@ class MultilineChart{
 				innerWidth = width - margin.right - margin.left,
 				x = app.options.xAxis.dataAttribute; 		
 	
-		console.log(x, data);
-
 		// ----------------------------------
 		// start working with the SVG
 		// ----------------------------------
@@ -64,9 +62,33 @@ class MultilineChart{
 		// ----------------------------------
 		
 		// If the user has defined min or max values for the y range, such as starting at zero,
-		// then use those values. Otherwise, find them.
-		const 	yMax = typeof(app.options.yAxis.maxValue) == "number" ? parseFloat(app.options.yAxis.maxValue) : d3.max(data, d => parseFloat(d[y])),
-				yMin = typeof(app.options.yAxis.minValue) == "number" ? parseFloat(app.options.yAxis.minValue) : d3.min(data, d => parseFloat(d[y]));
+		// then use those values. Otherwise, find them. The key is, howver, that since this is
+		// a multiline chart, we need to find the overall max by looping through each attribute
+		// and finding the biggest, then grabbing the max of that group.
+
+		let yMin, yMax;
+
+		if (typeof(app.options.yAxis.maxValue) == "number"){
+			yMax = parseFloat(app.options.yAxis.maxValue)
+		} else {
+			const temp = [];
+			app.options.yAxis.dataAttributes.forEach(att => {
+				temp.push(d3.max(data, d => d[att]))
+			});
+			yMax = d3.max(temp);
+		}
+
+		// Same as above, except max = min
+
+		if (typeof(app.options.yAxis.minValue) == "number"){
+			yMin = parseFloat(app.options.yAxis.minValue)
+		} else {
+			const temp = [];
+			app.options.yAxis.dataAttributes.forEach(att => {
+				temp.push(d3.min(data, d => d[att]))
+			});
+			yMin = d3.min(temp);
+		}
 
 		//Scale functions
 		const yScale = d3.scaleLinear()
@@ -84,17 +106,34 @@ class MultilineChart{
 		if (app.options.yAxis.totalTicks){
 			// If the user has defined a yAxis formatter, then use it.
 			yAxisFunc.ticks(app.options.yAxis.totalTicks);
-			console.log('adding ticks');
 		}		
 
-		// Make the xScale as we would any simple bar/line chart
+		// Typically multiline charts aren't vertical, but we'll use the same methods 
+		// Just in case
 
-		// const 	xMax = typeof(app.options.xAxis.maxValue) == "number" ? parseFloat(app.options.xAxis.maxValue) : d3.max(data, d => parseFloat(d[x])),
-		// 		xMin = typeof(app.options.xAxis.minValue) == "number" ? parseFloat(app.options.xAxis.minValue) : d3.min(data, d => parseFloat(d[x]));
+		let xMin, xMax;
 
-		const 	xMax = 2016,
-				xMin = 1930;
+		if (typeof(app.options.xAxis.maxValue) == "number"){
+			xMax = parseFloat(app.options.xAxis.maxValue)
+		} else {
+			const temp = [];
+			app.options.xAxis.dataAttribute.forEach(att => {
+				temp.push(d3.max(data, d => d[att]))
+			});
+			xMax = d3.max(temp);
+		}
 
+		// Same as above, except max = min
+
+		if (typeof(app.options.xAxis.minValue) == "number"){
+			xMin = parseFloat(app.options.xAxis.minValue)
+		} else {
+			const temp = [];
+			app.options.xAxis.dataAttribute.forEach(att => {
+				temp.push(d3.min(data, d => d[att]))
+			});
+			xMin = d3.min(temp);
+		}
 
 		const xScale = d3.scaleLinear()
 			.domain([xMin, xMax])
@@ -134,7 +173,6 @@ class MultilineChart{
 
 		// For each specified y attribute passed in 
 		app.options.yAxis.dataAttributes.forEach((y, idx) => {
-			console.log('y is', y);
 			const 	lineColor = app.options.lineColors[idx],
 					lineWeight = app.options.lineWeights[idx];
 

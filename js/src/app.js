@@ -1,5 +1,6 @@
 import inView from 'in-view';
 import MultilineChart from './multiline-chart.js';
+import BarChart from './bar-chart.js';
 import {format, curveBasisOpen} from 'd3';
 
 
@@ -18,9 +19,78 @@ window.addEventListener('load', function(e){
 
 	console.log("window is loaded");
 	const 	innerMargins = { top:15, right:15 ,bottom:30, left:40 },
+			incomeMargins = { top:15, right:15 ,bottom:30, left:45 },
 			lineWeight = 6,
 			lineColors = ['#aaa', 'black'],
 			curve = false;
+
+const incomeChart27 = new BarChart({
+    container: document.querySelector("#income-east-garfield-park-27"),
+    dataset: incomeData, // Will be charted AS IS. All transforms, etc., should be done by now.
+    innerMargins:incomeMargins, // This will inset the chart from the base container (which should be controlled by CSS)
+    barFillColor:lineColors[1], // must be a valid color syntax, #HEX, rgba(), etc.
+    xAxis:{
+        dataAttribute: "year", // The key of the x attribute in the data set
+        axisFormatter: format("d"),
+        minValue:false,
+        maxValue:false, // Useful for making multiple charts match in scale
+        showAxis: true,
+        removeAxisDomain: true,// the straight line with the axis
+        removeAxisTicks: true, // Set to true to remove the lines (not numbers)
+        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
+    },
+    yAxis:{
+        dataAttribute:"east_garfield_27", // The key of the y attribute in the data set
+        axisFormatter:format("$,"),
+        minValue:0,
+        maxValue:40000, // Useful for making multiple charts match in scale
+        showAxis: true,
+        removeAxisDomain: true, // the straight line with the axis
+        removeAxisTicks: false, // Set to true to remove the lines (not numbers)
+        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
+    },
+    meta:{
+        headline:false, // You must make room for this in the margins
+        xAxisLabel: false,
+        yAxisLabel: false,
+        sources: false, // You must make room for this in the margins
+        credit: false // You must make room for this in the margins
+    }
+});
+
+const incomeChart29 = new BarChart({
+    container: document.querySelector("#income-north-lawndale-29"),
+    dataset: incomeData, // Will be charted AS IS. All transforms, etc., should be done by now.
+    innerMargins:incomeMargins, // This will inset the chart from the base container (which should be controlled by CSS)
+    barFillColor:lineColors[1], // must be a valid color syntax, #HEX, rgba(), etc.
+    xAxis:{
+        dataAttribute: "year", // The key of the x attribute in the data set
+        axisFormatter: format("d"),
+        minValue:false,
+        maxValue:false, // Useful for making multiple charts match in scale
+        showAxis: true,
+        removeAxisDomain: true,// the straight line with the axis
+        removeAxisTicks: true, // Set to true to remove the lines (not numbers)
+        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
+    },
+    yAxis:{
+        dataAttribute:"north_lawndale_29", // The key of the y attribute in the data set
+        axisFormatter:format("$,"),
+        minValue:0,
+        maxValue:40000, // Useful for making multiple charts match in scale
+        showAxis: true,
+        removeAxisDomain: true, // the straight line with the axis
+        removeAxisTicks: false, // Set to true to remove the lines (not numbers)
+        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
+    },
+    meta:{
+        headline:false, // You must make room for this in the margins
+        xAxisLabel: false,
+        yAxisLabel: false,
+        sources: false, // You must make room for this in the margins
+        credit: false // You must make room for this in the margins
+    }
+});
 
 	const populationChart27 = new MultilineChart({
 	    container: document.querySelector("#east-garfield-park-27"),
@@ -31,9 +101,9 @@ window.addEventListener('load', function(e){
 		curve: curve,
 		highlightLastPoint: [true, true],
 	    xAxis:{
-	        dataAttribute:"year", // The key of the x attribute in the data set
+	        dataAttribute:["year"], // The key of the x attribute in the data set
 	        axisFormatter: format("d"),
-	        minValue:0,
+	        minValue:false,
 	        maxValue:false, // Useful for making multiple charts match in scale
 	        showAxis: true,
 	        removeAxisDomain: true,// the straight line with the axis
@@ -60,7 +130,7 @@ window.addEventListener('load', function(e){
 	});
 
 	const populationChart29 = new MultilineChart({
-	    container: document.querySelector("#west-englewood-29"),
+	    container: document.querySelector("#north-lawndale-29"),
 	    dataset: populationData, // Will be charted AS IS. All transforms, etc., should be done by now.
 	    innerMargins:innerMargins, // This will inset the chart from the base container (which should be controlled by CSS)
 	    lineColors:lineColors, // must be a valid color syntax, #HEX, rgba(), etc.
@@ -68,9 +138,9 @@ window.addEventListener('load', function(e){
 		curve: curve,
 		highlightLastPoint: [true, true],
 	    xAxis:{
-	        dataAttribute:"year", // The key of the x attribute in the data set
+	        dataAttribute:["year"], // The key of the x attribute in the data set
 	        axisFormatter: format("d"),
-	        minValue:0,
+	        minValue:false,
 	        maxValue:false, // Useful for making multiple charts match in scale
 	        showAxis: true,
 	        removeAxisDomain: true,// the straight line with the axis
@@ -88,7 +158,7 @@ window.addEventListener('load', function(e){
 	        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
 	    },
 	    meta:{
-	        headline:"East Garfield Park population", // You must make room for this in the margins
+	        headline:"North Lawndale population", // You must make room for this in the margins
 	        xAxisLabel: "Decade",
 	        yAxisLabel: "Percentage",
 	        sources: "Sources", // You must make room for this in the margins
