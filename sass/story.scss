@@ -194,4 +194,10 @@ h3{
 		max-width: calc(100vh - #{($grid-gap * 2) + $navbar_overall_height});
 		overflow: hidden;
 	}
+
+	.video-wrapper 
+	video{
+	max-width: $container-max-width;	
+
+	}
 }
