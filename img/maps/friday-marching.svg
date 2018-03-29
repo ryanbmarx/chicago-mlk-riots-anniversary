@@ -2,7 +2,6 @@
 <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="march_to_civic_center" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	 x="0px" y="0px" viewBox="0 0 610 622" style="enable-background:new 0 0 610 622;" xml:space="preserve">
-<rect x="404.973" y="124.811" style="fill:#D7153A;stroke:#000000;stroke-width:1.5;" width="9.029" height="9.029"/>
 <g>
 	<g>
 		<path d="M424.761,94.648l0.208,1.967c-0.66,0.124-1.144,0.368-1.45,0.733c-0.306,0.365-0.457,0.855-0.452,1.471
@@ -25,6 +24,7 @@
 			l-2.728,0.024l0.048,5.599l-1.688,0.014L421.801,129.66z"/>
 	</g>
 </g>
+<circle style="fill:none;stroke:#D72132;stroke-width:3;" cx="409.306" cy="128.563" r="7.277"/>
 <g>
 	<polygon points="541.491,240.104 432.79,240.104 432.79,175.284 441.154,175.284 409.487,129.326 450.82,175.284 541.491,175.284 
 		541.491,185.889 541.491,195.628 	"/>
