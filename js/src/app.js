@@ -214,7 +214,12 @@ window.addEventListener('DOMContentLoaded', function(e){
 	            console.log("Reached a map waypoint >>", el.getAttribute('id'));
 	        });
 	}
-
+	
+	// When the audio toggle button is clicked, then kill the audio.
+	document.querySelector('#audio-toggle').addEventListener('click', function(e){
+		const aud = document.querySelector('#ambient');
+		aud.pause();
+	})
 	    // Also, let's lazyload the images
 	 //    const lazyLoad = inView('.image--lazy img');
 		// lazyLoad.offset(-500);

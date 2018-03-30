@@ -1,7 +1,7 @@
 {% from './subtemplates/_macros.html' import photo_arr as photo_arr  with context%}
 
 <header class='header'>
-		<audio src="audio/CHI-RIOTS-HIST-AUDIO-intro.mp3" autoplay>
+		<audio id='ambient' src="audio/CHI-RIOTS-HIST-AUDIO-intro.mp3" autoplay preload="auto">
   Your browser does not support the <code>audio</code> element.
 </audio>
 	{% for panel in intro %}
@@ -9,6 +9,12 @@
  		<div class='panel panel--0'>
 			<div class='first-slide-background'>
 				<div class='first-slide'>
+					<p class='note'>
+						<svg>
+							<use xlink:href="#headphones" />
+						</svg>
+						This presentation contains audio. <button id='audio-toggle'>Silence audio</button>
+					</p>
 					<img class='first-slide--photo' src='http://{{ ROOT_URL }}/img/mlk_page_tear.png'>
 					<p class='panel__text'>{{panel.text}}</p>
 				</div>

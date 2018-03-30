@@ -3,6 +3,32 @@
     background-size: 150px;
 }
 
+.note{
+	@include sans-serif();
+	text-align:center;
+	color:white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(white,.1);
+    padding: 10px;
+
+
+	svg{
+		height: 1.5em;
+		width: 1.5em;
+		margin-right: .5em;
+		background: white;
+		padding: 3px;
+		border-radius: .3em;
+	}
+
+	button{
+		margin-left: .5em;
+	}
+}
 
 .first-slide-background {
 	display: flex;

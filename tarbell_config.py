@@ -316,7 +316,7 @@ get_drive_api_stuff()
 DEFAULT_CONTEXT.update(**get_extra_context())
 
 
-@register_hook('preview')
+# @register_hook('preview')
 @register_hook('generate')
 def refresh_archie(site, one=False, two=False):
     """
