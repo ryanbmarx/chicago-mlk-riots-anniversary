@@ -76,30 +76,6 @@
     box-sizing: border-box;
 }
 
-.headline{
-	@include serif-text(100px, .95em, normal);
-	@include responsive-font(22vw, 35px, 110px, 75px); // Makes the typesize more fluid as the window gets larger.
-	color: white;
-	margin: 0 0 #{$grid-gap / 2} 0;
-	text-align: center;
-	
-	
-	// @supports(width:max-content) or (width:-moz-max-content) or (width:-webkit-max-content) or (width:-o-max-content) or (width:-ie-max-content){
-	// 	// In browsers that support it, this  will stretch the headline
-	// 	// to a reasonable width and stretch the container while we're 
-	// 	// at it. If the browser doesn't support this, then we'll use a 
-	// 	// max-width on the container, but that might force the text to wrap.
-	// 	width: max-content;
-	// }
-}
-
-.subheadline{
-	font: 20px/1.5em #{$sans-serif-fonts};
-	color: white;
-	margin: 0 0 #{$grid-gap / 2} 0;
-	text-align: center;
-}
-
 .bylines{
 	p{
 		font: 16px/1.5em #{$sans-serif-fonts};

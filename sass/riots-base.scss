@@ -79,6 +79,22 @@ p{
   border: 0;
 }
 
+
+.headline{
+	@include serif-text(100px, .95em, normal);
+	@include responsive-font(22vw, 35px, 110px, 75px); // Makes the typesize more fluid as the window gets larger.
+	color: white;
+	margin: 0 0 #{$grid-gap / 2} 0;
+	text-align: center;
+}
+
+.subheadline{
+	font: 20px/1.5em #{$sans-serif-fonts};
+	color: white;
+	margin: 0 0 #{$grid-gap / 2} 0;
+	text-align: center;
+}
+
 .credits, .trb_mainContent .credits {
 	// All notes, sources and credits should go inside a container class='credits'
 	// and should use the agate type style. No italics
