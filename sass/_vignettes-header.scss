@@ -1,31 +1,24 @@
+
 .vignettes-header{
 	min-height: calc(100vh - #{$navbar-overall-height});
-	background: #aaa url(../img/top-0.jpg) center center no-repeat;
+	background: #aaa url(../img/top-photos/top-2.jpg) center center no-repeat;
 	background-size:cover;
 	position: relative;
 	margin-bottom: $grid-gap;
 	display:flex;
 
-	
-		    &:before{
-	    	content:"";
-	    	display:block;
-	    	background: black;
-	    	opacity: .7;
+    &:before{
+    	content:"";
+    	display:block;
+    	background: black;
+    	opacity: .7;
 
-	    	position: absolute;
-	    	top: 0;
-	    	left: 0;
-	    	width: 100%;
-	    	height: 100%;
-	    }
-	// &__image{
-	// 	position: absolute;
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -50%);
-	// 	height: 100%;
-	// }
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    }
 
 	&__inner{
 		box-sizing: border-box;
@@ -65,7 +58,7 @@
 
     flex-basis: 140px;
     text-align: center;
-    margin-right: 15px;
+    margin: 0 $grid-gap $grid-gap 0;
 
 	&__image{
 	    border-radius: 50%;
