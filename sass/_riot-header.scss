@@ -43,7 +43,7 @@
 	background-size: cover;
 	box-sizing:border-box;
 	position:relative;
-	border-bottom: 3px solid white;
+	border-bottom: 3px solid black;
 	
 	img {
 		position: sticky;
@@ -58,6 +58,7 @@
 	&__inner{
 		padding: $grid-gap;
 		
+		position:absolute;
 		top: 50vh;
 		left: 50vw;
 		transform: translate(-50%, -50%);
