@@ -1,6 +1,7 @@
 // Enables Tribune colors, but is required for everything.
 @import 'base-variables';
 @import 'base-config'; // If you are using the off-platform blueprint, uncomment this.
+@import 'riots-config';
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
@@ -13,7 +14,6 @@
 @import 'base-mixins';
 
 // ---- MAKE OR IMPORT MORE MIXINS HERE ---------------------------------------------
-
 
 
 // ---- TRIB CLASSES, UNCOMMENT THE ONES YOU WANT -----------------------------------
@@ -52,7 +52,13 @@
 
 body{
 	margin: 0;
+	background: $color-background-main;
 }
+
+p{
+	color: $base-text-color;
+}
+
 
 .sr-only{
 	// Use this to hide elements from everything except screen readers.

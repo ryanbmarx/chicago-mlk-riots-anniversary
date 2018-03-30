@@ -64,4 +64,12 @@ $graphic-left-edge: $river-text-width + $grid-gap + $container_padding_h; // Thi
 $sans-serif-fonts: "Open Sans", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 // $serif-fonts: "Georgia", serif !default;
 // $color-links: $trib-blue4 !default;
+$base-text-color: black;
+
+// Vignettes stuff here
+$vignettes-nav-width: 300px;
+$vignettes-min-width: 900px; // Not a min-width, per se, but a flex-basis
+$capsule-image-width: 50px;
+$capsule-transition-time: 250ms;
+
 

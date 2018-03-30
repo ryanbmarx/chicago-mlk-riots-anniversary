@@ -4,22 +4,15 @@
 
 @import 'base-mixins';
 
-// This is here and not in the riots config because it uses the set-text-color 
-// function, which is not imported until after the variables
-$base-text-color: #{set-text-color($color-background-main, true)};
-
 @import 'base-pullquote'; // If you want to start over with the pullquote design, remove this import
 @import 'base-photos-and-arrangements';
 
 // theming
 
-p{
-	color: $base-text-color;
-}
 
-body{
-	background: $color-background-main;
-}
+// body{
+	
+// }
 
 .cta__button { color: black }
 

@@ -1,10 +1,7 @@
 // Enables Tribune colors, but is required for everything.
 @import 'base-variables';
+@import 'riots-config';
 @import 'base-config'; 
-$vignettes-nav-width: 300px;
-$vignettes-min-width: 900px; // Not a min-width, per se, but a flex-basis
-$capsule-image-width: 50px;
-$capsule-transition-time: 250ms;
 
 // Required for everything, too, but can be broken down into smaller explicit imports if desired. 
 @import 'base-mixins';
@@ -88,7 +85,7 @@ $capsule-transition-time: 250ms;
 		display:flex;
 		align-items:center;
 		justify-content:flex-start;
-	    color: $trib-gray3;
+	    color: $trib-gray2;
 	    cursor:pointer;
 
 	    z-index: 10;
@@ -153,9 +150,14 @@ $capsule-transition-time: 250ms;
 
 
 .vignette{
-	margin: 0 0 $grid-gap 0;
-	padding: 0 0 $grid-gap 0;
+	margin: #{0 - $navbar-overall-height - $grid-gap} 0 #{$grid-gap} 0;
+	padding: #{$navbar-overall-height + $grid-gap} 0 #{$grid-gap} 0;
 	border-bottom: 1px solid $trib-gray4;
+	
+	&:last-child{
+		border-bottom: none;
+		padding: #{$navbar-overall-height + $grid-gap} 0 0 0;
+	}
 
 	&__kicker{
 		@include sans-serif-text(16px, 1em, bold);
