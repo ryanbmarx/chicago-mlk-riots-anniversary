@@ -25,6 +25,23 @@ h3{
     padding-left: .5em;
 }
 
+// Explode first graf
+.story .river > p:first-of-type, .story h3 + p{
+    font-size: 1.4em;
+    line-height: 1.65em;
+
+	// Story dropcap
+	&:first-letter
+		color: $trib-red2;
+		float: left;
+		font-size: 75px;
+		line-height: 60px;
+		padding-top: 4px;
+		padding-right: 8px;
+		padding-left: 3px;
+	}
+}
+
 .trib-pullquote {
 	blockquote, figcaption{ color: $base-text-color; }
 }
@@ -130,6 +147,7 @@ h3{
 	left: 0;
 	// opacity:1;
 }
+
 
 @media all and (min-width: $tablet-landscape-min-width){
 
