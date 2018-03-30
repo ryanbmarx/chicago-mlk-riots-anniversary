@@ -59,6 +59,9 @@ p{
 	color: $base-text-color;
 }
 
+.social-networks{justify-content: center;}
+.network--email .network__icon:hover, .network--email .network__icon:focus{fill:white;}
+
 .cta__button { color: black }
 
 .sr-only{
