@@ -12,7 +12,7 @@
 
 .first-slide {
 	width: 500px;
-	margin-top: 110px;
+	// margin-top: 110px;
 	&--photo {
 		width: 100%;
 		margin: auto;
@@ -46,7 +46,8 @@
 }
 
 .headline-container {
-	padding: 40px 0 40px 0;
+    padding: $grid-gap;
+    box-sizing: border-box;
 }
 
 .headline{
@@ -102,5 +103,10 @@
 			
 			max-width: 500px;
 		}
-	}	
+	}
+	.panel.panel--0{
+		height:auto;
+		padding: $grid-gap 0;
+		img{ position: static;}
+	}
 }

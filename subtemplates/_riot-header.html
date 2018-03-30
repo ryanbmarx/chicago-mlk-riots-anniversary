@@ -1,7 +1,9 @@
 {% from './subtemplates/_macros.html' import photo_arr as photo_arr  with context%}
 
 <header class='header'>
-		{# <div class='dotted-line'></div> #}
+		<audio src="audio/CHI-RIOTS-HIST-AUDIO-intro.mp3" autoplay>
+  Your browser does not support the <code>audio</code> element.
+</audio>
 	{% for panel in intro %}
  		{% if loop.first%}
  		<div class='panel panel--0'>
