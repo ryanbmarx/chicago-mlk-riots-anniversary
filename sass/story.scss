@@ -8,11 +8,35 @@
 @import 'base-photos-and-arrangements';
 
 // theming
+$rotations: 8;
+@keyframes batman{
+	0%{
+		transform: rotate(0) scale(.8);
+		filter: blur(1.5rem);
+	}
 
+	1%{
+		filter: blur(1.5rem);
+	}
 
-// body{
-	
-// }
+	75%{
+		transform: rotate(#{360 * $rotations}deg) scale(1.2);
+		filter: blur(0);	
+	}
+
+	100%{
+		transform: rotate(#{360 * $rotations}deg) scale(1.2);	
+	}
+
+}
+
+.batman{
+	animation-duration: 2s;
+	animation-name: batman;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
 
 .cta__button { color: black }
 
@@ -31,7 +55,7 @@ h3{
     line-height: 1.65em;
 
 	// Story dropcap
-	&:first-letter
+	&:first-letter{
 		color: $trib-red2;
 		float: left;
 		font-size: 75px;
