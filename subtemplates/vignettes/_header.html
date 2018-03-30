@@ -4,16 +4,13 @@
 		<p class='vignettes-header__dek'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex necessitatibus dolorem sit numquam nesciunt, a incidoluta sit.	</p>
 		<ul class='vignettes-header__mugs'>
 			{% for v in vignettes %}
-	
 				<li class='header-mug header-mug--{{ loop.index }}'>
-					<a class='header-mug__link' href="#">
+					<a class='header-mug__link' href="#{{ v.id }}">
 						<img class='header-mug__image' src='{{ v.image }}' alt="" />
 						<span class='header-mug__text' >{{ v.kicker }}</span>
 					</a>
 				</li>
 			{% endfor %}
 		</ul>
-
 	</div>
-
 </div>

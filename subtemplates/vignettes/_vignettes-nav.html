@@ -1,0 +1,11 @@
+<ul class='capsules'>
+	{% for v in vignettes %}
+	{# Loop through the vigennettes and make our pills #}
+		<li class='capsule {% if loop.first %} capsule--active{% endif %}' data-vignette="{{ v.id }}">
+			<a class='capsule__link' href="#{{ v.id }}" >
+				<img class='capsule__image' src='{{ v.image }}' alt="" />
+				<span class='capsule__text' >{{ v.kicker }}</span>
+			</a>
+		</li>
+	{% endfor %}
+</ul>

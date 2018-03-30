@@ -90,6 +90,9 @@ $capsule-transition-time: 250ms;
 		justify-content:flex-start;
 	    color: $trib-gray3;
 	    cursor:pointer;
+
+	    z-index: 10;
+	    position:relative;
 	}
 
 	&__image{

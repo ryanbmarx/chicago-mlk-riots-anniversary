@@ -42,6 +42,33 @@ module.exports = function(grunt) {
           ]
         ]
       }
+    },
+    vignettes: {
+      src: ['js/src/vignettes.js'],
+      dest: 'js/vignettes.min.js',
+      options: {
+        plugin: [
+          [
+            'minifyify', {
+              map: 'vignettes.min.js.map',
+              output: './js/vignettes.min.js.map'
+            }
+          ]
+        ],
+        transform: [
+          [
+            'babelify', {
+              "presets": [
+                ["env", {
+                  "targets": {
+                    "browsers": ["last 2 versions", "ie >= 11"]
+                  }
+                }]
+              ]
+            }
+          ]
+        ]
+      }
     }
   };
 
@@ -100,7 +127,7 @@ module.exports = function(grunt) {
     },
     js: {
       files: ['js/src/**/*.js'],
-      tasks: ['browserify:app']
+      tasks: ['browserify']
     }
   };
 

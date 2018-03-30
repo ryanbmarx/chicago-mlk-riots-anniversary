@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block stylesheets %}
+	{{ super() }}
     <link rel="stylesheet" type="text/css" href="css/vignettes.css">
 {% endblock stylesheets %}
 
@@ -14,12 +15,12 @@
 	{% include 'subtemplates/vignettes/_header.html' %}
 	<div class='vignettes-container'>
 		<nav class='vignettes-nav'>
-			{% include 'subtemplates/_vignettes-nav.html' %}
+			{% include 'subtemplates/vignettes/_vignettes-nav.html' %}
 		</nav>
 		<div class='vignettes-column'>
 			<section id='intro' class='intro container'>
 				<div class='river'>
-					<div class="advert" data-ad-type="shrinky-cube"></div>
+					{# <div class="advert" data-ad-type="shrinky-cube"></div> #}
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores ipsum quo? Accusamus, excepturi impedit a magni exercitationem molestiae repellendus cumque, sed ullam ex dicta dolore minus esse fugit, et.</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores ipsum quo? Accusamus, excepturi impedit a magni exercitationem molestiae repellendus cumque, sed ullam ex dicta dolore minus esse fugit, et.</p>
 				</div>
@@ -30,7 +31,7 @@
 			<section id='content' class='content container'>
 				{% for vig in vignettes %}
 					{% set v = vig %}
-					{% include 'subtemplates/_vignette.html' %}
+					{% include 'subtemplates/vignettes/_vignette.html' %}
 
 				{% endfor %}
 			</section>
@@ -49,5 +50,5 @@
 
 {% block scripts %}
 	{{ super() }}
-	{# <script src="//{{ ROOT_URL }}/js/app.min.js" type="text/javascript"></script> #}
+	<script src="//{{ ROOT_URL }}/js/vignettes.min.js" type="text/javascript"></script>
 {% endblock %}
