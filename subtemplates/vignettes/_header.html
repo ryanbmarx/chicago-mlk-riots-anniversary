@@ -11,10 +11,18 @@
 			{% for v in vignettes %}
 				<li class='header-mug header-mug--{{ loop.index }}'>
 					<a class='header-mug__link' href="#{{ v.id }}">
-						<img class='header-mug__image' src='{{ v.image }}' alt="" />
+						<img class='header-mug__image' src='{{ v.image }}' alt="Image of {{ v.first_name }} {{ v.last_name }}" />
 						<span class='header-mug__text' >{{ v.kicker }}</span>
 					</a>
 				</li>
+				{% if v.image_2 %}
+				<li class='header-mug header-mug--{{ loop.index }}'>
+					<a class='header-mug__link' href="#{{ v.id }}">
+						<img class='header-mug__image' src='{{ v.image_2 }}' alt="Image of {{ v.first_name_2 }} {{ v.last_name_2 }}" />
+						<span class='header-mug__text' >{{ v.kicker }}</span>
+					</a>
+				</li>
+				{% endif %}
 			{% endfor %}
 		</ul>
 	</div>
