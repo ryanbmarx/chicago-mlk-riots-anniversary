@@ -38,8 +38,6 @@ $rotations: 8;
 }
 
 
-.cta__button { color: black }
-
 h3{
 	// These are story breakers and should remain the top-level header inside a story.
 	@include sans-serif-text(28px, 1.2em, 700);
