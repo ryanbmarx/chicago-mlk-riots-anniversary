@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		{% else %}
-		<div class='panel panel--{{ panel.num }}' style='background: black'>
+		<div class='panel panel--{{ panel.num }}'>
 			<img src='http://{{ ROOT_URL }}/img/top-photos/top-{{ panel.num }}.jpg'>
 			<div class='panel__inner'>
 				<p class='panel__text'>{{panel.text}}</p>
@@ -21,7 +21,7 @@
 		{% endif %}
 		</div>
 	{% endfor %}
-	<div class='headline-container' style='background: #222 center center no-repeat;'>
+	<div class='headline-container'>
 		<h1 class='headline'>{{headline|upper}}</h1>
 		<h2 class='subheadline'>{{deck}}</h2>
 		<div class='bylines'>
