@@ -6,36 +6,37 @@
 
 @import 'base-pullquote'; // If you want to start over with the pullquote design, remove this import
 @import 'base-photos-and-arrangements';
+@import 'swiper';
 
 // theming
-$rotations: 8;
-@keyframes batman{
-	0%{
-		transform: rotate(0) scale(.8);
-		filter: blur(1.5rem);
-	}
+// $rotations: 8;
+// @keyframes batman{
+// 	0%{
+// 		transform: rotate(0) scale(.8);
+// 		filter: blur(1.5rem);
+// 	}
 
-	1%{
-		filter: blur(1.5rem);
-	}
+// 	1%{
+// 		filter: blur(1.5rem);
+// 	}
 
-	75%{
-		transform: rotate(#{360 * $rotations}deg) scale(1.2);
-		filter: blur(0);	
-	}
+// 	75%{
+// 		transform: rotate(#{360 * $rotations}deg) scale(1.2);
+// 		filter: blur(0);	
+// 	}
 
-	100%{
-		transform: rotate(#{360 * $rotations}deg) scale(1.2);	
-	}
+// 	100%{
+// 		transform: rotate(#{360 * $rotations}deg) scale(1.2);	
+// 	}
 
-}
+// }
 
-.batman{
-	animation-duration: 2s;
-	animation-name: batman;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
+// .batman{
+// 	animation-duration: 2s;
+// 	animation-name: batman;
+// 	animation-iteration-count: infinite;
+// 	animation-direction: alternate;
+// }
 
 
 h3{
@@ -47,8 +48,8 @@ h3{
     padding-left: .5em;
 }
 
-// Explode first graf
-.story .river > p:first-of-type, .story h3 + p{
+// Explode first graf if the story
+.river--first > p:first-of-type {
     font-size: 1.4em;
     line-height: 1.65em;
 
@@ -170,6 +171,33 @@ h3{
 	// opacity:1;
 }
 
+.vignettes-refer{
+
+	margin: $grid-gap 0;
+	padding: $grid-gap 0;
+
+	border-top: 1px solid $trib-gray3;
+	border-bottom: 1px solid $trib-gray3;
+
+	&__image{
+		width: 100%;
+	}
+
+	&__headline{
+		font: 35px/1.3em #{$fonts-serif};
+		margin: 0;
+	}
+
+	&__subheadline{
+		@include sans-serif();
+		margin: 0;
+	}
+
+	&__link{
+		margin: #{$grid-gap / 2} 0;
+		display: block;
+	}
+}
 
 @media all and (min-width: $tablet-landscape-min-width){
 
