@@ -18,7 +18,7 @@ window.addEventListener('load', function(e){
 	// -------------------------
 
 	console.log("window is loaded");
-	const 	innerMargins = { top:15, right:15 ,bottom:30, left:40 },
+	const 	innerMargins = { top:15, right:15 ,bottom:30, left:50 },
 			incomeMargins = { top:15, right:15 ,bottom:30, left:45 },
 			lineWeight = 6,
 			lineColors = ['#aaa', 'black'],
@@ -111,10 +111,10 @@ window.addEventListener('load', function(e){
 	        totalTicks: 10 // Remember, with d3 axes, this number is a suggestions
 	    },
 	    yAxis:{
-	        dataAttributes:["27_white_per", "27_black_per"], // The key of the y attribute in the data set
-	        axisFormatter:format(".0%"),
+	        dataAttributes:["27_white", "27_black"], // The key of the y attribute in the data set
+	        axisFormatter:format(","),
 	        minValue:0,
-	        maxValue:1, // Useful for making multiple charts match in scale
+	        maxValue:false, // Useful for making multiple charts match in scale
 	        showAxis: true,
 	        removeAxisDomain: true, // the straight line with the axis
 	        removeAxisTicks: false, // Set to true to remove the lines (not numbers)
@@ -148,10 +148,10 @@ window.addEventListener('load', function(e){
 	        totalTicks: 10 // Remember, with d3 axes, this number is a suggestions
 	    },
 	    yAxis:{
-	        dataAttributes:["29_white_per","29_black_per"], // The key of the y attribute in the data set
-	        axisFormatter:format(".0%"),
+	        dataAttributes:["29_white","29_black"], // The key of the y attribute in the data set
+	        axisFormatter:format(","),
 	        minValue:0,
-	        maxValue:1, // Useful for making multiple charts match in scale
+	        maxValue:false, // Useful for making multiple charts match in scale
 	        showAxis: true,
 	        removeAxisDomain: true, // the straight line with the axis
 	        removeAxisTicks: false, // Set to true to remove the lines (not numbers)
