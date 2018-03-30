@@ -116,9 +116,12 @@ h3{
 	img{ width: 100%;}
 }
 
+
+
 .map-waypoint--visible{
-	background: lighten(yellow, 25%);
-	color: #{set-text-color($trib-gray4, true)};
+	// background: lighten(yellow, 25%);
+	background: $waypoint-text-highlight-color;
+	color: white;
 }
 
 .map-layer{
