@@ -1,7 +1,7 @@
 <div class='vignettes-header'>
 	<div class='vignettes-header__inner'>
-		<h1 class='vignettes-header__headline'>Lorem ipsum dolor sit amet</h1>
-		<p class='vignettes-header__dek'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex necessitatibus dolorem sit numquam nesciunt, a incidoluta sit.	</p>
+		<h1 class='vignettes-header__headline'>{{ vignettes_headline }}</h1>
+		<h2 class='vignettes-header__dek'>{{ vignettes_subheadline }}</h2>
 		<ul class='vignettes-header__mugs'>
 			{% for v in vignettes %}
 				<li class='header-mug header-mug--{{ loop.index }}'>

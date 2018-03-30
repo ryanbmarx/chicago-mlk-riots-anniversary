@@ -1,5 +1,8 @@
 <div class='vignette' id='{{ v.id }}'>
-	<h4 class='vignette__kicker'>THE {{vig.kicker|upper}}</h4>
+	<h4 class='vignette__kicker'>{{vig.kicker|upper}}</h4>
+	<p class='vignette__quote-name'>{{vig.first_name}} {{vig.last_name}}</p>
+	<p class='vignette__quote-description'>{{ vig.then }}</p>
+
 	<figure class='vignette__quote'>
 		<blockquote>{{vig.quote}}</blockquote>
 		<figcaption>
