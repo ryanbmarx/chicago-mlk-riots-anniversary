@@ -4,7 +4,7 @@
 		{# <div class='dotted-line'></div> #}
 	{% for panel in intro %}
  		{% if loop.first%}
- 		<div class='panel'>
+ 		<div class='panel panel--0'>
 			<div class='first-slide-background'>
 				<div class='first-slide'>
 					<img class='first-slide--photo' src='http://{{ ROOT_URL }}/img/mlk_page_tear.png'>
@@ -13,7 +13,8 @@
 			</div>
 		</div>
 		{% else %}
-		<div class='panel panel--{{ panel.num }}' style='background: black url(http://{{ ROOT_URL }}/img/top-photos/top-{{ panel.num }}.jpg) center center no-repeat;'>
+		<div class='panel panel--{{ panel.num }}' style='background: black'>
+			<img src='http://{{ ROOT_URL }}/img/top-photos/top-{{ panel.num }}.jpg'>
 			<div class='panel__inner'>
 				<p class='panel__text'>{{panel.text}}</p>
 			</div>
