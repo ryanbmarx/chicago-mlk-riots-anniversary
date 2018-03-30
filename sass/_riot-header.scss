@@ -49,9 +49,9 @@
 
 .first-slide {
 	width: 500px;
+	margin-top: 110px;
 	&--photo {
 		width: 100%;
-		border: 1px solid white;
 		margin: auto;
 	}
 }
@@ -76,21 +76,34 @@
 }
 
 .panel{
-	height: calc(100vh - #{$navbar-overall-height}); // 1vh == 1% viewport height
+	//height: calc(100vh - #{$navbar-overall-height}); // 1vh == 1% viewport height
+	height: 200vh;
 	background-size: cover;
 	box-sizing:border-box;
-	padding: $grid-gap;
+	//padding: $grid-gap;
 	position:relative;
 	border-bottom: 3px solid white;
+	img {
+		position: -webkit-sticky;
+		position: sticky;
+		width: 100%;
+		top: 20px;
+		z-index: 2;
+		margin: 0;
+
+	}
 
 
 	&__inner{
 		padding: $grid-gap;
-		position: absolute;
-		bottom:$grid-gap * 3;
-		right: 50%;
+		//position: absolute;
+		position: relative;
+		//bottom:$grid-gap * 3;
+		//right: 50%;
 		background-color: rgba(black, .7);
-		transform: translate(50%, 0);
+		//transform: translate(50%, 0);
+		z-index: 100;
+		margin: auto;
 		
 		// @supports not ((width:max-content) or (width:-moz-max-content) or (width:-webkit-max-content) or (width:-o-max-content) or (width:-ie-max-content)){
 			// In browsers that do not support `width:max-content`, this will use a 
@@ -104,6 +117,14 @@
 		font: 20px/1.5em #{$sans-serif-fonts};
 		opacity: 0.85;
 		color: white;
+		text-align: center;
+	}
+
+	&--0 {
+		height: 100vh;
+		img {
+			position: static;
+		}
 	}
 
 	&--header{
