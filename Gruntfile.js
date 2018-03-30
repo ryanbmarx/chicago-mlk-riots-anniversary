@@ -42,7 +42,7 @@ module.exports = function(grunt) {
           ]
         ]
       }
-    }
+    },
     vignettes: {
       src: ['js/src/vignettes.js'],
       dest: 'js/vignettes.min.js',
