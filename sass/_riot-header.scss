@@ -57,7 +57,11 @@
 
 	&__inner{
 		padding: $grid-gap;
-		position: relative;
+		
+		top: 50vh;
+		left: 50vw;
+		transform: translate(-50%, -50%);
+
 		background-color: rgba(black, .7);
 		z-index: 100;
 		margin: auto;
