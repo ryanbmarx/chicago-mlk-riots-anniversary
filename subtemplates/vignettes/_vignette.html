@@ -1,14 +1,11 @@
 <div class='vignette' id='{{ v.id }}'>
-	<h4 class='vignette__kicker'>{{vig.kicker|upper}}</h4>
-	<p class='vignette__quote-name'>{{vig.first_name}} {{vig.last_name}}</p>
-	<p class='vignette__quote-description'>{{ vig.then }}</p>
-
-	<figure class='vignette__quote'>
-		<blockquote>{{vig.quote}}</blockquote>
-		<figcaption>
-			<p class='vignette__quote-name'>{{vig.first_name}} {{vig.last_name}}</p>
-			<p class='vignette__quote-description'>{{ vig.then }}</p>
-		</figcaption>
+	<h3 class='vignette__kicker'>{{vig.kicker|upper}}</h3>
+	<p class='vignette__name'>{{vig.first_name}} {{vig.last_name}} {% if vig.first_name_2 %} & {{ vig.first_name_2 }} {{ vig.last_name_2 }}{% endif %}
+</p>
+	<p class='vignette__description'>{{ vig.then }} {% if vig.first_name_2 %} & {{ vig.then_2 }}{% endif %}</p>
+	<figure>
+		<blockquote class='vignette__quote'>{{vig.quote}}</blockquote>
+		{% if vig.first_name_2 %}<figcaption class='vignette__quote-attribution'>{{vig.first_name}} {{vig.last_name}}</figcaption>{% endif %}
 	</figure>
 	<figure class='vignette__video'>
 		<div class="video-wrapper">
@@ -27,5 +24,17 @@
 		{{vig.text|markdown}}
 		{{vig.text_2|markdown}}
 		<p><em>— {{ vig.byline }}</em></p>
+		{% if vig.quote_2 %}
+			<figure>
+				<blockquote class='vignette__quote vignette__quote--2'>{{vig.quote_2}}</blockquote>
+				{% if vig.first_name_2 %}<figcaption class='vignette__quote-attribution'>{{ vig.first_name_2 }} {{ vig.last_name_2 }}</figcaption>{% endif %}
+			</figure>
+		{% endif %}
+		{% if vig.extra_photo and vig.extra_photo_cap %}
+			<figure class='vignette__old-photo'>
+				<img src='{{ vig.extra_photo }}' alt='A historical photo' />
+				<figcaption>{{ vig.extra_photo_cap }}</figcaption>
+			</figure>
+		{% endif %}
 	</div>
 </div>
