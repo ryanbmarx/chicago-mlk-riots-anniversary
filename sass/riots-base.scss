@@ -61,7 +61,10 @@ p{
 
 .social-networks{justify-content: center;}
 .network--email .network__icon:hover, .network--email .network__icon:focus{fill:white;}
-
+.bylines time[itemprop="dateModified"] {
+	color:white;
+	text-align:center;
+}
 .cta__button { color: black }
 
 .sr-only{
