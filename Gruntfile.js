@@ -13,7 +13,8 @@ module.exports = function(grunt) {
   config.browserify = {
     options: {
       browserifyOptions: {
-        debug: true
+        debug: true,
+        paths:['js/src/', 'node_modules/swiper/dist/js']
       }
     },
     app: {
@@ -98,7 +99,7 @@ module.exports = function(grunt) {
     options: {
       outputStyle: 'compressed',
       sourceMap: true,
-      includePaths: [ 'sass/', 'node_modules/trib-styles/sass/', '_blueprint/base-sass/' ]
+      includePaths: [ 'sass/', 'node_modules/swiper/dist/css', 'node_modules/trib-styles/sass/', '_blueprint/base-sass/' ]
     },
     app: {
       files: {

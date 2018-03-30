@@ -2,7 +2,7 @@ import inView from 'in-view';
 import MultilineChart from './multiline-chart.js';
 import BarChart from './bar-chart.js';
 import {format, curveBasisOpen} from 'd3';
-
+import Swiper from 'swiper.min.js';
 
 
 function isMobile(){
@@ -24,41 +24,41 @@ window.addEventListener('load', function(e){
 			lineColors = ['#aaa', 'black'],
 			curve = false;
 
-const incomeChart27 = new BarChart({
-    container: document.querySelector("#income-east-garfield-park-27"),
-    dataset: incomeData, // Will be charted AS IS. All transforms, etc., should be done by now.
-    innerMargins:incomeMargins, // This will inset the chart from the base container (which should be controlled by CSS)
-    barFillColor:lineColors[1], // must be a valid color syntax, #HEX, rgba(), etc.
-    xAxis:{
-        dataAttribute: "year", // The key of the x attribute in the data set
-        axisFormatter: format("d"),
-        minValue:false,
-        maxValue:false, // Useful for making multiple charts match in scale
-        showAxis: true,
-        removeAxisDomain: true,// the straight line with the axis
-        removeAxisTicks: true, // Set to true to remove the lines (not numbers)
-        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
-    },
-    yAxis:{
-        dataAttribute:"east_garfield_27", // The key of the y attribute in the data set
-        axisFormatter:format("$,"),
-        minValue:0,
-        maxValue:40000, // Useful for making multiple charts match in scale
-        showAxis: true,
-        removeAxisDomain: true, // the straight line with the axis
-        removeAxisTicks: false, // Set to true to remove the lines (not numbers)
-        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
-    },
-    meta:{
-        headline:false, // You must make room for this in the margins
-        xAxisLabel: false,
-        yAxisLabel: false,
-        sources: false, // You must make room for this in the margins
-        credit: false // You must make room for this in the margins
-    }
-});
+	const incomeChart27 = new BarChart({
+	    container: document.querySelector("#income-east-garfield-park-27"),
+	    dataset: incomeData, // Will be charted AS IS. All transforms, etc., should be done by now.
+	    innerMargins:incomeMargins, // This will inset the chart from the base container (which should be controlled by CSS)
+	    barFillColor:lineColors[1], // must be a valid color syntax, #HEX, rgba(), etc.
+	    xAxis:{
+	        dataAttribute: "year", // The key of the x attribute in the data set
+	        axisFormatter: format("d"),
+	        minValue:false,
+	        maxValue:false, // Useful for making multiple charts match in scale
+	        showAxis: true,
+	        removeAxisDomain: true,// the straight line with the axis
+	        removeAxisTicks: true, // Set to true to remove the lines (not numbers)
+	        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
+	    },
+	    yAxis:{
+	        dataAttribute:"east_garfield_27", // The key of the y attribute in the data set
+	        axisFormatter:format("$,"),
+	        minValue:0,
+	        maxValue:40000, // Useful for making multiple charts match in scale
+	        showAxis: true,
+	        removeAxisDomain: true, // the straight line with the axis
+	        removeAxisTicks: false, // Set to true to remove the lines (not numbers)
+	        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
+	    },
+	    meta:{
+	        headline:false, // You must make room for this in the margins
+	        xAxisLabel: false,
+	        yAxisLabel: false,
+	        sources: false, // You must make room for this in the margins
+	        credit: false // You must make room for this in the margins
+	    }
+	});
 
-const incomeChart29 = new BarChart({
+	const incomeChart29 = new BarChart({
     container: document.querySelector("#income-north-lawndale-29"),
     dataset: incomeData, // Will be charted AS IS. All transforms, etc., should be done by now.
     innerMargins:incomeMargins, // This will inset the chart from the base container (which should be controlled by CSS)
@@ -90,7 +90,7 @@ const incomeChart29 = new BarChart({
         sources: false, // You must make room for this in the margins
         credit: false // You must make room for this in the margins
     }
-});
+	});
 
 	const populationChart27 = new MultilineChart({
 	    container: document.querySelector("#east-garfield-park-27"),
@@ -165,6 +165,44 @@ const incomeChart29 = new BarChart({
 	        credit: false // You must make room for this in the margins
 	    }
 	});
+
+
+    const swipers = [].slice.call(document.querySelectorAll('.swiper-container'));
+    if (swipers.length > 0){
+        let slideshows={};
+        swipers.forEach((swiper, index) => {
+            swiper.setAttribute('id', `swiper${index}`);
+            //if there are swipers, iterate over the containers array and init them.
+            slideshows[`swiper${index}`] = new Swiper('.swiper-container', {
+                speed: 400,
+                slidesPerView: 1,
+                centeredSlides: true,
+                // pagination: `#swiper${index} .swiper-pagination`,
+                nextButton: `#swiper${index} .swiper-button-next`,
+                prevButton: `#swiper${index} .swiper-button-prev`,
+                // scrollBar: '.swiper-scrollbar',
+                paginationClickable: true,
+                spaceBetween: 30,
+                loop: true,
+                // Disable preloading of all images
+                // preloadImages: false,
+                // // Enable lazy loading
+                // lazyLoading: true,
+                // watchSlidesProgress:true,
+                // watchSlidesVisibility:true
+            }); 
+
+            
+
+            document.querySelector(`.swiper-button-next`).addEventListener('click', e => {
+                slideshows[`swiper${index}`].slideNext();
+            });
+
+            document.querySelector(`.swiper-button-prev`).addEventListener('click', e => {
+                slideshows[`swiper${index}`].slidePrev();
+            });         
+        });
+    }
 
 });
 
