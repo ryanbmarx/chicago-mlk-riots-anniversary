@@ -177,10 +177,10 @@ window.addEventListener('DOMContentLoaded', function(e){
 	// Only do this if we are desktop+
 	if (!isMobile()){
 	  	// Let's set our lazyload offset to roughly half the viewport height. 
-	  	// This will trigger our waypoints about halfway up the screen.
+	  	// This will trigger our waypoints about 40% up the screen.
 	    const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 	    console.log('viewportHeight = ', viewportHeight);
-	    inView.offset(viewportHeight/2);
+	    inView.offset(viewportHeight * .4);
 	    
 	    // Let's do things with the map
 	    inView('.map-waypoint')
