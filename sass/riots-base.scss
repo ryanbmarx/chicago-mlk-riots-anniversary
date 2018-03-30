@@ -123,7 +123,7 @@ a{
 
 // Changes to comments to match the theme
 
-#comments-button{ color: white; }
+#comments-button:hover{ color: white; }
 #comments .trb_cm_so[data-role="cm_container"] { 
 	background: white; 
 	padding-top: $grid-gap / 2;
