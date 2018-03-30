@@ -95,30 +95,32 @@ h3{
 	box-sizing:border-box;
 	background:white;
 	margin: $grid-gap 0;
+	
 	img {width: 100%;}
+}
 
-	.chart-headline{
-		@include label7();
-		color:black;
-		margin: 0;
-	}
+.chart-headline{
+	@include label7();
+	color:black;
+	margin: 0;
+}
 
-	.chart-describer{
-		@include sans-serif();
-		color:black;
-		margin: 0;
-	}
+.chart-describer{
+	@include sans-serif();
+	color:black;
+	margin: 0;
+}
 
-	.chart-subheadline{
-		@include sans-serif();
-		font-weight:bold;
-		color:black;
-		margin: #{$grid-gap / 2} 0 0 0;
-	}
+.chart-subheadline{
+	@include sans-serif();
+	font-weight:bold;
+	color:black;
+	margin: #{$grid-gap / 2} 0 0 0;
+}
 
-	.chart-label{
-		@include sans-serif-text(14px, 1em, 400);
-	}
+.chart-label{
+	@include sans-serif-text(14px, 1.3em, 400);
+	margin: 0 0 7px 0;
 }
 
 .chart{
@@ -258,6 +260,15 @@ h3{
 		// = TOTAL HEIGHT - NAV WITH A GRID-GAP MARGIN ABOVE AND BELOW.
 		max-width: calc(100vh - #{($grid-gap * 2) + $navbar_overall_height});
 		overflow: hidden;
+
+		&__notes{
+			box-sizing: border-box;
+			padding: $grid-gap/3;
+			background: rgba(white, .5);
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
 	}
 
 	.video-wrapper 
