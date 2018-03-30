@@ -124,11 +124,18 @@ a{
 // Changes to comments to match the theme
 
 #comments-button:hover{ color: white; }
-#comments .trb_cm_so[data-role="cm_container"] { 
-	background: white; 
-	padding-top: $grid-gap / 2;
-}
+#comments {
 
+	.trb_cm_so[data-role="cm_container"] { 
+	    overflow: hidden;
+	}
+
+	.so_comments{
+		background: white; 
+		padding-top: $grid-gap / 2;		
+	    box-sizing: border-box;
+	}
+}
 .image{
 	@include trib-image();
 	img{ width: 100%; }
