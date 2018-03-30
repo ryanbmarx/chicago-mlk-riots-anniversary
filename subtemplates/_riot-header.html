@@ -5,7 +5,7 @@
   Your browser does not support the <code>audio</code> element.
 </audio>
 	{% for panel in intro %}
- 		{% if loop.first%}
+ 		{# {% if loop.first%}
  		<div class='panel panel--0'>
 			<div class='first-slide-background'>
 				<div class='first-slide'>
@@ -20,13 +20,21 @@
 				</div>
 			</div>
 		</div>
-		{% else %}
+		{% else %} #}
 		<div class='panel panel--{{ panel.num }}'>
 			<img src='http://{{ ROOT_URL }}/img/top-photos/top-{{ panel.num }}.jpg'>
 			<div class='panel__inner'>
+				{% if loop.first %}
+					<p class='note'>
+						<svg>
+							<use xlink:href="#headphones" />
+						</svg>
+						This presentation contains audio. <button id='audio-toggle'>Silence audio</button>
+					</p>
+				{% endif %}
 				<p class='panel__text'>{{panel.text}}</p>
 			</div>
-		{% endif %}
+{# 		{% endif %} #}
 		</div>
 	{% endfor %}
 	<div class='headline-container'>
