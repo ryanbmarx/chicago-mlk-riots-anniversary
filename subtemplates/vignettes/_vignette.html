@@ -1,7 +1,6 @@
 <div class='vignette' id='{{ v.id }}'>
 	<h3 class='vignette__kicker'>{{vig.kicker|upper}}</h3>
-	<p class='vignette__name'>{{vig.first_name}} {{vig.last_name}} {% if vig.first_name_2 %} & {{ vig.first_name_2 }} {{ vig.last_name_2 }}{% endif %}
-</p>
+	<p class='vignette__name'>{{vig.first_name}} {{vig.last_name}} {% if vig.first_name_2 %} & {{ vig.first_name_2 }} {{ vig.last_name_2 }}{% endif %}</p>
 	<p class='vignette__description'>{{ vig.then }} {% if vig.first_name_2 %} & {{ vig.then_2 }}{% endif %}</p>
 	<figure>
 		<blockquote class='vignette__quote'>{{vig.quote}}</blockquote>
@@ -21,6 +20,9 @@
 	<h2 class='deck'>{{vig.deck}}</h2>
 	
 	<div class='river'>
+		{% if idx == 1 or idx % 3 == 0 %}
+		<div class="advert advert--right" data-ad-type="shrinky-cube"></div>
+		{% endif %}
 		{{vig.text|markdown}}
 		{{vig.text_2|markdown}}
 		<p><em>— {{ vig.byline }}</em></p>

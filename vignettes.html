@@ -21,6 +21,7 @@
 			<section id='content' class='content container'>
 				{% for vig in vignettes %}
 					{% set v = vig %}
+					{% set idx = loop.index %}
 					{% include 'subtemplates/vignettes/_vignette.html' %}
 
 				{% endfor %}
