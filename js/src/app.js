@@ -24,6 +24,73 @@ window.addEventListener('load', function(e){
 			lineColors = ['#aaa', 'black'],
 			curve = false;
 
+	const povertyChart27 = new BarChart({
+	    container: document.querySelector("#poverty-east-garfield-park-27"),
+	    dataset: povertyData, // Will be charted AS IS. All transforms, etc., should be done by now.
+	    innerMargins:incomeMargins, // This will inset the chart from the base container (which should be controlled by CSS)
+	    barFillColor:lineColors[1], // must be a valid color syntax, #HEX, rgba(), etc.
+	    xAxis:{
+	        dataAttribute: "year", // The key of the x attribute in the data set
+	        axisFormatter: format("d"),
+	        minValue:false,
+	        maxValue:false, // Useful for making multiple charts match in scale
+	        showAxis: true,
+	        removeAxisDomain: true,// the straight line with the axis
+	        removeAxisTicks: true, // Set to true to remove the lines (not numbers)
+	        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
+	    },
+	    yAxis:{
+	        dataAttribute:"east_garfield_27", // The key of the y attribute in the data set
+	        axisFormatter:format(".0%"),
+	        minValue:0,
+	        maxValue:1, // Useful for making multiple charts match in scale
+	        showAxis: true,
+	        removeAxisDomain: true, // the straight line with the axis
+	        removeAxisTicks: false, // Set to true to remove the lines (not numbers)
+	        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
+	    },
+	    meta:{
+	        headline:false, // You must make room for this in the margins
+	        xAxisLabel: false,
+	        yAxisLabel: false,
+	        sources: false, // You must make room for this in the margins
+	        credit: false // You must make room for this in the margins
+	    }
+	});
+	const povertyChart29 = new BarChart({
+	    container: document.querySelector("#poverty-north-lawndale-29"),
+	    dataset: povertyData, // Will be charted AS IS. All transforms, etc., should be done by now.
+	    innerMargins:incomeMargins, // This will inset the chart from the base container (which should be controlled by CSS)
+	    barFillColor:lineColors[1], // must be a valid color syntax, #HEX, rgba(), etc.
+	    xAxis:{
+	        dataAttribute: "year", // The key of the x attribute in the data set
+	        axisFormatter: format("d"),
+	        minValue:false,
+	        maxValue:false, // Useful for making multiple charts match in scale
+	        showAxis: true,
+	        removeAxisDomain: true,// the straight line with the axis
+	        removeAxisTicks: true, // Set to true to remove the lines (not numbers)
+	        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
+	    },
+	    yAxis:{
+	        dataAttribute:"north_lawndale_29", // The key of the y attribute in the data set
+	        axisFormatter:format(".0%"),
+	        minValue:0,
+	        maxValue:1, // Useful for making multiple charts match in scale
+	        showAxis: true,
+	        removeAxisDomain: true, // the straight line with the axis
+	        removeAxisTicks: false, // Set to true to remove the lines (not numbers)
+	        totalTicks: 5 // Remember, with d3 axes, this number is a suggestions
+	    },
+	    meta:{
+	        headline:false, // You must make room for this in the margins
+	        xAxisLabel: false,
+	        yAxisLabel: false,
+	        sources: false, // You must make room for this in the margins
+	        credit: false // You must make room for this in the margins
+	    }
+	});
+
 	const incomeChart27 = new BarChart({
 	    container: document.querySelector("#income-east-garfield-park-27"),
 	    dataset: incomeData, // Will be charted AS IS. All transforms, etc., should be done by now.

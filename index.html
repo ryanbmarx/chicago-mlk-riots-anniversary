@@ -6,6 +6,7 @@
 	<script>
 		const populationData = {{ data_population|tojson }};
 		const incomeData = {{ data_income|tojson }};
+		const povertyData = {{ data_poverty|tojson }};
 	</script>
 {% endblock %}
 
@@ -16,9 +17,7 @@
 
 
 {% block content %}
-
-	{% include 'subtemplates/_riot-header.html' %}
-	
+	{% include 'subtemplates/_riot-header.html' %}	
 {# 	<div class="advert" data-ad-type="shrinky-cube"></div>	
 	<div class="advert" data-ad-type="leaderboard"></div> #}
 	<section class='story container'>
