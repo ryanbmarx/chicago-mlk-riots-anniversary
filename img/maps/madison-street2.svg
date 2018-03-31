@@ -60,6 +60,7 @@
 	</g>
 </g>
 <rect x="219.934" y="175.568" style="fill:#FFFFFF;stroke:#8C001A;stroke-width:2;stroke-miterlimit:10;" width="24.762" height="23.762"/>
+<rect x="369.777" y="55.132" style="fill:#FFFFFF;stroke:#8C001A;stroke-width:2;stroke-miterlimit:10;" width="18.868" height="20.355"/>
 <rect x="160.747" y="131.738" style="fill:#FFFFFF;stroke:#8C001A;stroke-width:2;stroke-miterlimit:10;" width="26.139" height="24.58"/>
 <rect x="369.987" y="458.826" style="fill:#FFFFFF;stroke:#8C001A;stroke-width:2;stroke-miterlimit:10;" width="22.923" height="46.65"/>
 <rect x="186.434" y="131.738" style="opacity:0.8;fill:#FFFFFF;" width="115.035" height="9"/>
@@ -461,4 +462,5 @@
 <line style="fill:none;stroke:#8C001A;stroke-width:2;stroke-miterlimit:10;" x1="233.025" y1="299.734" x2="233.025" y2="199.895"/>
 <polyline style="fill:none;stroke:#8C001A;stroke-width:2;stroke-miterlimit:10;" points="233.416,175.954 233.416,147.796 
 	186.887,147.796 "/>
+<line style="fill:none;stroke:#8C001A;stroke-width:2;stroke-miterlimit:10;" x1="381.894" y1="76.326" x2="381.894" y2="341.106"/>
 </svg>
