@@ -120,6 +120,9 @@ a{
 	}
 }
 
+.container .advert {
+    width: calc(100% + 60px);
+}
 
 // This is the paywall/meter/registration sticky note at the bottom of the page
 .met-flyout .met-promo-content{
