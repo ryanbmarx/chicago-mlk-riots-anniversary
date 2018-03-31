@@ -182,7 +182,10 @@ h3{
 	border-top: $border;
 	border-bottom: $border;
 
+
+	&__text{}
 	&__image{
+		// flex: 1 1 100px;
 		width: 100%;
 	}
 
@@ -204,6 +207,28 @@ h3{
 
 @media all and (min-width: $tablet-landscape-min-width){
 	
+	@supports (display:grid){
+		
+		// We'll use grid to make this more compact. For those browsers that don't support, leave it in mobile display
+
+		.vignettes-refer{
+			display: grid;
+			grid-template-columns: 200px 1fr;
+			grid-gap: #{$grid-gap / 2};
+
+			&__text{
+				grid-row: 1;
+				grid-column: 2;
+			    align-self: center; // Make sure content is vertically centered
+			}
+
+			&__image{
+				grid-row: 1;
+				grid-column: 1;
+			}
+		}
+	}
+
 	@supports (position:sticky){
 		// Test for sticky support. If there is none, such as on IE11, then leave it as mobile display
 
