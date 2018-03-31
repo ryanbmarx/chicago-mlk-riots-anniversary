@@ -174,61 +174,9 @@ h3{
     z-index: 10;
 }
 
-.vignettes-refer{
-
-	margin: $grid-gap 0;
-	padding: $grid-gap 0;
-
-	border-top: $border;
-	border-bottom: $border;
-
-
-	&__text{}
-	&__image{
-		// flex: 1 1 100px;
-		width: 100%;
-	}
-
-	&__headline{
-		font: 35px/1.3em #{$fonts-serif};
-		margin: 0;
-	}
-
-	&__subheadline{
-		@include sans-serif();
-		margin: 0;
-	}
-
-	&__link{
-		margin: #{$grid-gap / 2} 0;
-		display: block;
-	}
-}
 
 @media all and (min-width: $tablet-landscape-min-width){
 	
-	@supports (display:grid){
-		
-		// We'll use grid to make this more compact. For those browsers that don't support, leave it in mobile display
-
-		.vignettes-refer{
-			display: grid;
-			grid-template-columns: 200px 1fr;
-			grid-gap: #{$grid-gap / 2};
-
-			&__text{
-				grid-row: 1;
-				grid-column: 2;
-			    align-self: center; // Make sure content is vertically centered
-			}
-
-			&__image{
-				grid-row: 1;
-				grid-column: 1;
-			}
-		}
-	}
-
 	@supports (position:sticky){
 		// Test for sticky support. If there is none, such as on IE11, then leave it as mobile display
 
