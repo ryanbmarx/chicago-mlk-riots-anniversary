@@ -168,6 +168,41 @@ a{
 	}
 }
 
+.refer--share{
+	// float: right;
+	width: 100%;
+	text-align:center;
+	margin: $grid-gap auto;
+
+	padding: $grid-gap 0;
+	border-top: 1px solid $trib-gray4;
+	border-bottom: 1px solid $trib-gray4;
+
+
+	.refer__image{
+		max-width: 200px;
+		display:block;
+		margin: #{$grid-gap / 2} auto;
+	}
+
+	.refer__headline{
+		@include serif-text(30px, 1.3em, normal);
+		margin: 0;
+		// flex: 1;
+		// order: 2;
+	}
+
+	.refer__link{
+		@include sans-serif();
+		display:block;
+		padding:$grid-gap / 2;
+		background: #eee;
+		text-align:center;
+		flex-basis: 150px;
+		order: 3;
+	}
+}
+
 @media all and (min-width: $phablet-min-width){
 	// By default, this is 450px+
 	p{
@@ -179,6 +214,14 @@ a{
 @media all and (min-width: $tablet-min-width){
 	// ONLY CHANGES FOR TABLETS + DESKTOPS
 	// By default, this is 650px+	
+	.refer--share{
+		max-width: 280px;	
+		float: right;
+		margin: $grid-gap 0 $grid-gap $grid-gap;
+		padding: 0;
+		border-top: none;
+		border-bottom: none;
+	}
 }
 
 @media all and (min-width: $desktop-min-width){

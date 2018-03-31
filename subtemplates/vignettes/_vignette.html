@@ -23,6 +23,9 @@
 		{% if idx == 1 or idx % 3 == 0 %}
 		<div class="advert advert--right" data-ad-type="shrinky-cube"></div>
 		{% endif %}
+		{% if idx == 2 %}
+			{% include 'subtemplates/_refer-share.html' %}
+		{% endif %}
 		{{vig.text|markdown}}
 		{{vig.text_2|markdown}}
 		<p><em>— {{ vig.byline }}</em></p>
