@@ -65,7 +65,7 @@ $graphic-left-edge: $river-text-width + $grid-gap + $container_padding_h; // Thi
 $sans-serif-fonts: "Open Sans", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 $fonts-sans-serif: $sans-serif-fonts; // Correcting for a bug in the sass machine I have built
 // $serif-fonts: "Georgia", serif !default;
-// $color-links: $trib-blue4 !default;
+$color-links: $trib-blue2;
 $base-text-color: black;
 
 // Vignettes stuff here
