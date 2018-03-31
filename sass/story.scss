@@ -203,71 +203,70 @@ h3{
 }
 
 @media all and (min-width: $tablet-landscape-min-width){
+	
+	@supports (position:sticky){
+		// Test for sticky support. If there is none, such as on IE11, then leave it as mobile display
 
-	.story .river{
-		// width: $river-text-width;
-		margin: 0 ;
-		// background: yellow;
-		// position: static;
+		.story .river{
+			// width: $river-text-width;
+			margin: 0 ;
+			// background: yellow;
+			// position: static;
 
-	}
+		}
 
 
-	.side{
-		width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h});
-		position: absolute;
-		left: $graphic-left-edge;
-		margin: 0;
-	}
-
-	.graphic-wrapper{
-		// For the side-saddle graphics
-		// width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h});
-		// position: absolute;
-		// left: $graphic-left-edge;
-		// margin: 0;
-		padding: 20px;
-		box-sizing:border-box;
-		background:white;
-	}
-
-	.map-wrapper{
-		display:none;
-		&--traveler{
-			display:block;
-			margin: 0;
+		.side{
 			width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h});
 			position: absolute;
 			left: $graphic-left-edge;
-			min-height: 600px;
-			height: 100%; // Since this is positioned absolutely, 100% height should stretch it to the full height of the container
+			margin: 0;
 		}
-	}
-	.map-layer{
-		opacity:0;
-		transition: opacity 150ms ease;
-		&--visible{
-			opacity:1;
-			transition: opacity 150ms ease;
-		}
-	}
-	.map{
-		position:sticky;
-		top: #{$grid-gap + $navbar-overall-height};
-		display:block;
-		// This max height makes sure it is vertically centered in shorter 
-		// viewports and not forced into a tall height on larger viewports
-		// = TOTAL HEIGHT - NAV WITH A GRID-GAP MARGIN ABOVE AND BELOW.
-		max-width: calc(100vh - #{($grid-gap * 2) + $navbar_overall_height});
-		overflow: hidden;
 
-		&__notes{
-			box-sizing: border-box;
-			padding: $grid-gap/3;
-			background: rgba(white, .5);
-			position: absolute;
-			left: 0;
-			bottom: 0;
+		.graphic-wrapper{
+			padding: 20px;
+			box-sizing:border-box;
+			background:white;
+		}
+
+		.map-wrapper{
+			display:none;
+			&--traveler{
+				display:block;
+				margin: 0;
+				width: calc(100% - #{$graphic-left-edge} - #{$container_padding_h});
+				position: absolute;
+				left: $graphic-left-edge;
+				min-height: 600px;
+				height: 100%; // Since this is positioned absolutely, 100% height should stretch it to the full height of the container
+			}
+		}
+		.map-layer{
+			opacity:0;
+			transition: opacity 150ms ease;
+			&--visible{
+				opacity:1;
+				transition: opacity 150ms ease;
+			}
+		}
+		.map{
+			position:sticky;
+			top: #{$grid-gap + $navbar-overall-height};
+			display:block;
+			// This max height makes sure it is vertically centered in shorter 
+			// viewports and not forced into a tall height on larger viewports
+			// = TOTAL HEIGHT - NAV WITH A GRID-GAP MARGIN ABOVE AND BELOW.
+			max-width: calc(100vh - #{($grid-gap * 2) + $navbar_overall_height});
+			overflow: hidden;
+
+			&__notes{
+				box-sizing: border-box;
+				padding: $grid-gap/3;
+				background: rgba(white, .5);
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
 		}
 	}
 
