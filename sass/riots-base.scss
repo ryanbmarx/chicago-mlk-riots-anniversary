@@ -206,6 +206,13 @@ a{
 	}
 }
 
+
+@media (min-width: 769px){
+	.container .advert[data-ad-type="shrinky-cube"], .advert[data-ad-type="cube"] {
+	    width: 300px;
+	}
+}
+
 @media all and (min-width: $phablet-min-width){
 	// By default, this is 450px+
 	p{
