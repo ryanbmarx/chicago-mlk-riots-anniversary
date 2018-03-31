@@ -178,8 +178,8 @@ a{
 	margin: $grid-gap auto;
 
 	padding: $grid-gap 0;
-	border-top: 1px solid $trib-gray4;
-	border-bottom: 1px solid $trib-gray4;
+	border-top: $border;
+	border-bottom: $border;
 
 
 	.refer__image{
