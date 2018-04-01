@@ -8,6 +8,7 @@
 		<div class='panel panel--{{ panel.num }}'>
 			<img src='http://{{ ROOT_URL }}/img/top-photos/top-{{ panel.num }}.jpg'>
 			<div class='panel__inner'>
+				<div class='panel__text'>{{ panel.text|markdown }}</div>
 				{% if loop.first %}
 					<p class='note'>
 						<svg>
@@ -16,7 +17,6 @@
 						This presentation contains audio. <button id='audio-toggle'>Silence audio</button>
 					</p>
 				{% endif %}
-				<div class='panel__text'>{{ panel.text|markdown }}</div>
 			</div>
 		</div>
 	{% endfor %}

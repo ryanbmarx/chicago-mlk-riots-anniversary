@@ -18,30 +18,30 @@
 {% block title %}<title>{{ headline }} -- Chicago Tribune</title>{% endblock title %}
 
 {% block content %}
-	{% include 'subtemplates/_riot-header.html' %}	
-{# 	<div class="advert" data-ad-type="shrinky-cube"></div>	
-	<div class="advert" data-ad-type="leaderboard"></div> #}
-	<section class='story container'>
-		<div class='river river--first'>
-			{# This section is the traveling map, which needs its own container #}
-			{% for story in stories['mainbar1'] %}
-				{% set s = story %}
-				{% include 'subtemplates/_story-loop.html' %}
-			{% endfor %}
-		</div>
-	</section>
-	<section class='story container'>
-		<div class='river'>
-			{# This section is the rest of the story #}
-			{% for story in stories['mainbar2'] %}
-				{% set s = story %}
-				{% include 'subtemplates/_story-loop.html' %}
-			{% endfor %}
-		</div>
-	</section>
-
-	{{ refer() }}
-	<section id='content' class='content container'></section>
+	<article>
+		{% include 'subtemplates/_riot-header.html' %}	
+	{# 	<div class="advert" data-ad-type="shrinky-cube"></div>	
+		<div class="advert" data-ad-type="leaderboard"></div> #}
+		<section class='story container'>
+			<div class='river river--first'>
+				{# This section is the traveling map, which needs its own container #}
+				{% for story in stories['mainbar1'] %}
+					{% set s = story %}
+					{% include 'subtemplates/_story-loop.html' %}
+				{% endfor %}
+			</div>
+		</section>
+		<section class='story container'>
+			<div class='river'>
+				{# This section is the rest of the story #}
+				{% for story in stories['mainbar2'] %}
+					{% set s = story %}
+					{% include 'subtemplates/_story-loop.html' %}
+				{% endfor %}
+			</div>
+		</section>
+		{{ refer() }}
+	</article>
 {% endblock content %}
 
 

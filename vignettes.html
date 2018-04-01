@@ -14,25 +14,26 @@
 
 {% block content %}
 	{# <div class="advert" data-ad-type="leaderboard"></div> #}
-	{% include 'subtemplates/vignettes/_header.html' %}
-	<div class='vignettes-container'>
-		<nav class='vignettes-nav'>
-			{% include 'subtemplates/vignettes/_vignettes-nav.html' %}
-		</nav>
-		<div class='vignettes-column'>
-			<section id='content' class='content container'>
-				{% for vig in vignettes %}
-					{% set v = vig %}
-					{% set idx = loop.index %}
-					{% include 'subtemplates/vignettes/_vignette.html' %}
-					{% if idx == 3 %}
-						{% include 'subtemplates/_mainbar-teaser.html' %}
-					{% endif %}
-				{% endfor %}
-			</section>
+	<article>
+		{% include 'subtemplates/vignettes/_header.html' %}
+		<div class='vignettes-container'>
+			<nav class='vignettes-nav'>
+				{% include 'subtemplates/vignettes/_vignettes-nav.html' %}
+			</nav>
+			<div class='vignettes-column'>
+				<section id='content' class='content container'>
+					{% for vig in vignettes %}
+						{% set v = vig %}
+						{% set idx = loop.index %}
+						{% include 'subtemplates/vignettes/_vignette.html' %}
+						{% if idx == 3 %}
+							{% include 'subtemplates/_mainbar-teaser.html' %}
+						{% endif %}
+					{% endfor %}
+				</section>
+			</div>
 		</div>
-	</div>
-
+	</article>
 {% endblock content %}
 
 
