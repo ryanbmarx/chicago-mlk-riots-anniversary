@@ -35,23 +35,18 @@
 			</p>
  
 			<p itemprop="author creator">
-				Photos and video by <a href="mailto:tbriscoe@chicagotribune.com" target="_blank">
-					<span itemtype="http://schema.org/Person" itemscope="">Terrence Antonio James</span>
-				</a>
-			</p>
-			<p itemprop="author creator">
 				Photos and video by <a href="mailto:tjames@chicagotribune.com" target="_blank">
 					<span itemtype="http://schema.org/Person" itemscope="">Terrence Antonio James</span>
 				</a>
 			</p>
-			<p itemprop="author creator">
+			{# <p itemprop="author creator">
 				Graphics by <a href="mailto:jbrinson@chicagotribune.com" target="_blank">
 					<span itemtype="http://schema.org/Person" itemscope="">Jemal R. Brinson</span>
 				</a> and 
 				<a href="mailto:cyoder@chicagotribune.com" target="_blank">
 					<span itemtype="http://schema.org/Person" itemscope="">Chad Yoder</span>
 				</a> 
-			</p>
+			</p> #}
 
 			<meta itemprop="datePublished" datetime="{{ date_published|xldate_to_datetime }}" content="{{ date_published|xldate_to_datetime }}">
 			<time itemprop="dateModified" datetime="{{ date_modified }}"content="{{ date_modified|xldate_to_datetime }}">PUBLISHED: {{ date_modified|xldate_to_datetime|format_date_with_strftime("%B %-d, %Y") }}</time>
