@@ -1,5 +1,7 @@
 {% extends "subtemplates/_riots-base.html" %}
 
+{% block title %}<title>{{ vignettes_headline }} -- Chicago Tribune</title>{% endblock title %}
+
 {% block library_scripts %}
 	{# <script src="//{{ ROOT_URL }}/js/vendor.min.js" type="text/javascript"></script> #}
 {% endblock %}
@@ -38,3 +40,6 @@
 	{{ super() }}
 	<script src="//{{ ROOT_URL }}/js/vignettes.min.js" type="text/javascript"></script>
 {% endblock %}
+
+{% block chartbeat_page_title %}{{ super() }} -- Vignettes{% endblock chartbeat_page_title %}
+{% block omniture_page_name %}{{ super() }}--vignettes{% endblock omniture_page_name %}
