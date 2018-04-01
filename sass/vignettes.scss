@@ -83,12 +83,12 @@
 
 	&__old-photo{
 		@include trib-image();
-		box-sizing:border-box;
-		padding: $grid-gap;
-		border-radius: 3px;
-		background: #FAF7F2;
-	    box-shadow: 2px 2px 3px rgba(black,.35);
-	    transform: rotate(-1deg);
+		// box-sizing:border-box;
+		// padding: $grid-gap;
+		// border-radius: 3px;
+		// background: #FAF7F2;
+	 //    box-shadow: 2px 2px 3px rgba(black,.35);
+	 //    transform: rotate(-1deg);
 	}
 }
 
