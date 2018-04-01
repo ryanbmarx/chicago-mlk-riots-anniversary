@@ -16,7 +16,7 @@
 						This presentation contains audio. <button id='audio-toggle'>Silence audio</button>
 					</p>
 				{% endif %}
-				<p class='panel__text'>{{panel.text}}</p>
+				<div class='panel__text'>{{ panel.text|markdown }}</div>
 			</div>
 		</div>
 	{% endfor %}
