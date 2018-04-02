@@ -323,7 +323,11 @@ window.addEventListener('DOMContentLoaded', function(e){
 	// When the audio toggle button is clicked, then kill the audio.
 	document.querySelector('#audio-toggle').addEventListener('click', function(e){
 		const aud = document.querySelector('#ambient');
-		aud.pause();
+		if (aud.paused){
+			aud.play();
+		} else {
+			aud.pause();
+		}
 	})
 	    // Also, let's lazyload the images
 	 //    const lazyLoad = inView('.image--lazy img');
