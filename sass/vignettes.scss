@@ -110,6 +110,10 @@ $vignette-divider-color: #aaa;
 	}
 }
 
+.vignette--quote-only{
+	.vignette__quote{ font-size: 2em; }
+	.vignette__quote-attribution{font-weight: bold;}
+}
 
 .category {
 	width: 200px;
