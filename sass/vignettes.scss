@@ -3,6 +3,8 @@
 @import 'riots-config';
 @import 'base-config'; 
 
+$vignette-divider-color: #aaa;
+
 // Required for everything, too, but can be broken down into smaller explicit imports if desired. 
 @import 'base-mixins';
 
@@ -17,13 +19,35 @@
 
 
 .vignette{
-	margin: #{0 - $navbar-overall-height - $grid-gap} 0 #{$grid-gap} 0;
-	padding: #{$navbar-overall-height + $grid-gap} 0 #{$grid-gap} 0;
-	border-bottom: $border;
+	padding: 0 0 #{$grid-gap * 2} 0;
+	position:relative;
 	
+	&:after{
+		content:"";
+		display:block;
+		background: $vignette-divider-color;
+		height: 2px;
+		width: 200px;
+		position: absolute;
+		bottom: $grid-gap;
+		left: 50%;
+		transform: translate(-50%, 50%);
+	}
+
+	&:before{
+		content: "\25C6";
+		font-size: 1.5em;
+		color: $vignette-divider-color;
+		line-height: 1.1em;
+		position: absolute;
+		bottom: $grid-gap;
+		left: 50%;
+		transform: translate(-50%, .5em);
+		
+
+	}
 	&:last-child{
-		border-bottom: none;
-		padding: #{$navbar-overall-height + $grid-gap} 0 0 0;
+		&:before, &:after{ content: none; }
 	}
 
 	&__kicker{
@@ -81,14 +105,8 @@
 		}
 	}
 
-	&__old-photo{
+	&__photo{
 		@include trib-image();
-		// box-sizing:border-box;
-		// padding: $grid-gap;
-		// border-radius: 3px;
-		// background: #FAF7F2;
-	 //    box-shadow: 2px 2px 3px rgba(black,.35);
-	 //    transform: rotate(-1deg);
 	}
 }
 

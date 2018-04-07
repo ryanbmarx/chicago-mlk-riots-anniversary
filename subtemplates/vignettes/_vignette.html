@@ -1,23 +1,44 @@
-<div class='vignette' id='{{ v.id }}'>
-	<h3 class='vignette__kicker'>{{vig.kicker|upper}}</h3>
-	<p class='vignette__name'>{{vig.first_name}} {{vig.last_name}} {% if vig.first_name_2 %} & {{ vig.first_name_2 }} {{ vig.last_name_2 }}{% endif %}</p>
-	<p class='vignette__description'>{{ vig.then }} {% if vig.first_name_2 %} & {{ vig.then_2 }}{% endif %}</p>
-	<figure>
-		<blockquote class='vignette__quote'>{{vig.quote}}</blockquote>
-		{% if vig.first_name_2 %}<figcaption class='vignette__quote-attribution'>{{vig.first_name}} {{vig.last_name}}</figcaption>{% endif %}
-	</figure>
+{% macro video(id) %}
 	<figure class='vignette__video'>
 		<div class="video-wrapper">
 			<video
 			data-account="3690581440001"
 			data-player="S1vBkbMfe"
 			data-embed="default"
-			data-video-id="ref:{{ vig.video_id }}"
+			data-video-id="ref:{{ id }}"
 			class="video-js"
 			controls></video>
 		</div>
 	</figure>
-	<h2 class='deck'>{{vig.deck}}</h2>
+{% endmacro %}
+
+{% macro quote(quote, first=False, last=False) %}
+	<figure>
+		<blockquote class='vignette__quote'>{{ quote }}</blockquote>
+		{% if first or last %}
+			<figcaption class='vignette__quote-attribution'>
+				{% if first %}{{ first }}{% endif %}{% if last %} {{ last }}{% endif %}
+			</figcaption>
+		{% endif %}
+	</figure>
+{% endmacro %}
+
+{% macro photo(src, alt, cap) %}
+	<figure class='vignette__photo'>
+		<img src='img/vignettes/{{ src }}' alt='{{ alt }}' />
+		<figcaption>{{ cap }}</figcaption>
+	</figure>
+{% endmacro %}
+
+
+<div class='vignette' id='{{ v.id }}'>
+	{% if v.kicker %}<h3 class='vignette__kicker'>{{v.kicker|upper}}</h3>{% endif %}
+	<p class='vignette__name'>{{v.first_name}} {{v.last_name}} {% if v.first_name_2 %} & {{ v.first_name_2 }} {{ v.last_name_2 }}{% endif %}</p>
+	<p class='vignette__description'>{{ v.then }} {% if v.first_name_2 %} & {{ v.then_2 }}{% endif %}</p>
+	
+	{% if v.quote %}{{ quote(v.quote, v.first_name, v.last_name) }}{% endif %}
+	{% if v.video_id %}{{ video(v.video_id) }}{% endif %}
+	{% if v.deck %}<h2 class='deck'>{{v.deck}}</h2>{% endif %}
 	
 	<div class='river'>
 		{% if idx == 1 or idx % 3 == 0 %}
@@ -26,20 +47,18 @@
 		{% if idx == 2 %}
 			{% include 'subtemplates/_refer-share.html' %}
 		{% endif %}
-		{{vig.text|markdown}}
-		{{vig.text_2|markdown}}
-		<p><em>— {{ vig.byline }}</em></p>
-		{% if vig.quote_2 %}
-			<figure>
+		{% if v.text %}{{ v.text|markdown }}{% endif %}
+		{% if v.text_2 %}{{ v.text_2|markdown }}{% endif %}
+		<p><em>— {{ v.byline }}</em></p>
+		{% if v.quote_2 %}
+			{{ quote(v.quote_2, v.first_name_2, v.last_name_2) }}
+			{# <figure>
 				<blockquote class='vignette__quote vignette__quote--2'>{{vig.quote_2}}</blockquote>
 				{% if vig.first_name_2 %}<figcaption class='vignette__quote-attribution'>{{ vig.first_name_2 }} {{ vig.last_name_2 }}</figcaption>{% endif %}
-			</figure>
+			</figure> #}
 		{% endif %}
-		{% if vig.extra_photo and vig.extra_photo_cap %}
-			<figure class='vignette__old-photo'>
-				<img src='img/vignettes/{{ vig.extra_photo }}' alt='A historical photo' />
-				<figcaption>{{ vig.extra_photo_cap }}</figcaption>
-			</figure>
+		{% if v.extra_photo and v.extra_photo_cap %}
+			{{ photo(v.extra_photo, "An historical photo", v.extra_photo_cap) }}
 		{% endif %}
 	</div>
 </div>

@@ -1,0 +1,14 @@
+{% from './subtemplates/vignettes/_vignette.html' import video as video  with context %}
+{% from './subtemplates/vignettes/_vignette.html' import quote as quote  with context %}
+{% from './subtemplates/vignettes/_vignette.html' import photo as photo  with context %}
+
+
+<div class='vignette vignette--quote-only' id='{{ v.id }}'>
+	{% set last_name = False %}
+	{% if v.last_name %}
+		{% set last_name = v.last_name %}
+	{% endif %}
+	{% if v.quote %}{{ quote(v.quote, v.first_name, last_name) }}{% endif %}
+	<p class='vignette__description'>{{ v.then }}</p>
+
+</div>
