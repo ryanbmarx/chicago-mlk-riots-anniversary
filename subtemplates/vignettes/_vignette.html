@@ -37,7 +37,14 @@
 	<p class='vignette__description'>{{ v.then }} {% if v.first_name_2 %} & {{ v.then_2 }}{% endif %}</p>
 	
 	{% if v.quote %}{{ quote(v.quote, v.first_name, v.last_name) }}{% endif %}
-	{% if v.video_id %}{{ video(v.video_id) }}{% endif %}
+	
+	{# A video will take priority over a porttrait photo #}
+	{% if v.video_id %}
+		{{ video(v.video_id) }}
+	{% elif v.image %}
+		{{ photo(v.image, "A photo of {{ v.first_name }} {{ v.last_name }}", v.image_caption) }}
+	{% endif %}
+
 	{% if v.deck %}<h2 class='deck'>{{v.deck}}</h2>{% endif %}
 	
 	<div class='river'>
