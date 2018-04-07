@@ -22,17 +22,17 @@
 
 	&__inner{
 		box-sizing: border-box;
-		background: rgba(black, .7);
+		// background: rgba(black, .7);
 		padding: $grid-gap;
 		margin: auto;
-		max-width: 600px;
+		// max-width: 600px;
 		position: relative;
 
 		text-align:center;
 	}
 
 	&__headline{
-		@include label1();
+		@include label2();
 		color:white;
 		margin: 0;
 	}
@@ -71,4 +71,11 @@
     	@include sans-serif-text(16px, 1.3em, normal);
     	color:white;
     }
+}
+
+
+@media all and (min-width: $tablet-min-width){
+	.vignettes-header__headline{
+		font-size: 60px;
+	}
 }
