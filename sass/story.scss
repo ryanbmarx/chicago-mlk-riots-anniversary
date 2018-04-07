@@ -48,22 +48,6 @@ h3{
     padding-left: .5em;
 }
 
-// Explode first graf if the story
-.river--first > p:first-of-type {
-    font-size: 1.4em;
-    line-height: 1.65em;
-
-	// Story dropcap
-	&:first-letter{
-		color: $trib-red2;
-		float: left;
-		font-size: 75px;
-		line-height: 60px;
-		padding-top: 4px;
-		padding-right: 8px;
-		padding-left: 3px;
-	}
-}
 
 .trib-pullquote {
 	border-left: 3px solid $trib_red2;
