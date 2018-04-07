@@ -12,12 +12,12 @@
 	</figure>
 {% endmacro %}
 
-{% macro quote(quote, first=False, last=False) %}
+{% macro quote(quote, first=False, last=False, then=False) %}
 	<figure>
 		<blockquote class='vignette__quote'>{{ quote }}</blockquote>
 		{% if first or last %}
 			<figcaption class='vignette__quote-attribution'>
-				{% if first %}{{ first }}{% endif %}{% if last %} {{ last }}{% endif %}
+				{% if first %}{{ first }}{% endif %}{% if last %} {{ last }}{% endif %}{% if then %}, {{ then }}{% endif %}
 			</figcaption>
 		{% endif %}
 	</figure>

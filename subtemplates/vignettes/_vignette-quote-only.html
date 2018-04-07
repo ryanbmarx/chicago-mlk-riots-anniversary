@@ -8,7 +8,5 @@
 	{% if v.last_name %}
 		{% set last_name = v.last_name %}
 	{% endif %}
-	{% if v.quote %}{{ quote(v.quote, v.first_name, last_name) }}{% endif %}
-	<p class='vignette__description'>{{ v.then }}</p>
-
+	{% if v.quote %}{{ quote(v.quote, v.first_name, last_name, v.then) }}{% endif %}
 </div>

@@ -1,7 +1,7 @@
 <div class='vignettes-header'>
 	<div class='vignettes-header__inner'>
 		{% include "base-subtemplates/_social-share.html" %}
-		<h1 class='headline'>{{ vignettes_headline }}</h1>
+		<h1 class='vignettes-header__headline'>{{ vignettes_headline }}</h1>
 		<h2 class='subheadline'>{{ vignettes_subheadline }}</h2>
 		<div class='bylines'>
 			<meta itemprop="datePublished" datetime="{{ date_published|xldate_to_datetime }}" content="{{ date_published|xldate_to_datetime }}">
