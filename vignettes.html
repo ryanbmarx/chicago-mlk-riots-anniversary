@@ -17,12 +17,14 @@
 	<article>
 		{% include 'subtemplates/vignettes/_header.html' %}
 		<div class='vignettes-container'>
-{# 			<nav class='vignettes-nav'>
+			<nav class='vignettes-nav'>
 				{% include 'subtemplates/vignettes/_vignettes-nav.html' %}
-			</nav> #}
+			</nav>
 			<div class='vignettes-column'>
 				<section id='content' class='content container'>
-					{{ stories['vignettes_intro'][0]['text']|markdown }}
+					<div class='river river--first'>
+						{{ stories['vignettes_intro'][0]['text']|markdown }}
+					</div>
 					{% for vignette in stories['vignettes']|sort(attribute="display_order") if vignette.id %}
 						{% set v = vignette %}
 						{% set idx = loop.index %}
