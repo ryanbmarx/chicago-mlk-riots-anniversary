@@ -41,9 +41,12 @@
 			grid-gap: #{$grid-gap / 2};
 
 			&--mainbar{
+				box-sizing: border-box;
 				grid-template-columns: 350px 1fr;
 				border-top: none;
-				padding-top: 0;
+				border-bottom: none;
+				padding: $grid-gap;
+				background: #e0e0e0;
 			}
 
 			&__text{
