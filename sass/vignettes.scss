@@ -59,6 +59,7 @@ $vignette-divider-color: #aaa;
 	&__name{
 		@include sans-serif-text(35px, 1em, bold);
 		text-align:center;
+		margin: 0 0 #{$grid-gap / 2} 0
 	}
 
 	&__description{

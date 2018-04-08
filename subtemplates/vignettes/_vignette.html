@@ -32,9 +32,10 @@
 
 
 <div class='vignette' id='{{ v.id }}'>
-	{% if v.kicker %}<h3 class='vignette__kicker'>{{v.kicker|upper}}</h3>{% endif %}
-	<p class='vignette__name'>{{v.first_name}} {{v.last_name}} {% if v.first_name_2 %} & {{ v.first_name_2 }} {{ v.last_name_2 }}{% endif %}</p>
-	<p class='vignette__description'>{{ v.then }} {% if v.first_name_2 %} & {{ v.then_2 }}{% endif %}</p>
+	<h3 class='vignette__name'>{{v.first_name}} {{v.last_name}} {% if v.first_name_2 %} & {{ v.first_name_2 }} {{ v.last_name_2 }}{% endif %}</h3>
+	{% if v.then %}<p class='vignette__kicker'>{{v.then}}</p>{% endif %}
+
+	{# <p class='vignette__description'>{{ v.then }} {% if v.first_name_2 %} & {{ v.then_2 }}{% endif %}</p> #}
 	
 	{# Only run the name with the quote if more than one person is listed in the name fields #}
 	{% if v.quote %}
