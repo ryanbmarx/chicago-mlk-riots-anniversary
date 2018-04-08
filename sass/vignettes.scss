@@ -304,6 +304,13 @@ $vignette-divider-color: #aaa;
 		// SO the image sits on top of the slidey background
 	    position: relative;
 	    z-index: 10;
+
+	    img{
+	    	// To *help* remedy pixelation on upscaled images.
+			image-rendering: pixelated;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: crisp-edges;
+	    }
 	}
 
 	&__text{
