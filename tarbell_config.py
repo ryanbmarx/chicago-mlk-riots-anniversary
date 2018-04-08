@@ -52,6 +52,24 @@ EXCLUDES = ['*.md', 'requirements.txt', 'node_modules', 'sass', 'js/src', '*.ai'
 # this is some story formatting stuff #
 #######################################
 
+@blueprint.app_template_filter('sort_vignettes')
+def sort_vignettes(vignettes, attribute):
+    """
+    because the AML only comes in as strings, this little function will convert the display order attribute to a number, then sort.
+    """
+    
+    for v in vignettes:
+        try:
+            v["display_order"] = float(v["display_order"])
+        except:
+            """
+            Do nothing if the above fails since there is no display order to parse
+            """
+            pass
+
+    return sorted(vignettes, key = lambda v: v['display_order'])
+
+
 @blueprint.app_template_filter('get_photo_limit')
 def get_photo_limit(design):
     """

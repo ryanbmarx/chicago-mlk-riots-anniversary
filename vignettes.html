@@ -25,7 +25,7 @@
 					<div class='river river--first'>
 						{{ stories['vignettes_intro'][0]['text']|markdown }}
 					</div>
-					{% for vignette in stories['vignettes']|sort(attribute="display_order") if vignette.id %}
+					{% for vignette in stories['vignettes']|sort_vignettes("display_order") if vignette.id %}
 						{% set v = vignette %}
 						{% set idx = loop.index %}
 						{% if vignette.text and vignette.deck %}
