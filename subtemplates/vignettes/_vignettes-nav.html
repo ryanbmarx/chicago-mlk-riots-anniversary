@@ -1,5 +1,5 @@
 <ul class='capsules'>
-	{% for v in stories['vignettes']|sort(attribute="display_order") if v.id and v.text %}
+	{% for v in stories['vignettes']|sort_vignettes("display_order") if v.id and v.text %}
 	{# Loop through the vigennettes and make our pills #}
 		<li class='capsule {% if loop.first %} capsule--active{% endif %}' data-vignette="{{ v.id }}">
 			<a class='capsule__link' href="#{{ v.id }}" >
