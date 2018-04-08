@@ -30,6 +30,8 @@
 						{% set idx = loop.index %}
 						{% if vignette.text and vignette.deck %}
 							{% include 'subtemplates/vignettes/_vignette.html' %}
+						{% elif vignette.subhed %}
+							{% include 'subtemplates/vignettes/_vignette-subhed.html' %}
 						{% else %}
 							{% include 'subtemplates/vignettes/_vignette-quote-only.html' %}
 						{% endif %}
