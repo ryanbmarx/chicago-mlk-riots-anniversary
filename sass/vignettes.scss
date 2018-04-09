@@ -109,12 +109,34 @@ $vignette-divider-color: #aaa;
 
 	&__photo{
 		@include trib-image();
+		max-width: 800px;
+		display: block;
+		margin: 0 auto 25px auto;
+	}
+
+	&__subhed {
+
+		margin-top: 10px;
+
+		&:before, &:after {
+			content: none;
+		}
 	}
 }
 
 .vignette--quote-only{
 	.vignette__quote{ font-size: 2em; }
 	.vignette__quote-attribution{font-weight: bold;}
+}
+
+.subhed {
+	@include serif-text(45px, 1.3em, bold);
+	text-align: center;
+
+	&__deck {
+		font: 20px/1.5em #{$sans-serif-fonts};
+		text-align: center;
+	}
 }
 
 
